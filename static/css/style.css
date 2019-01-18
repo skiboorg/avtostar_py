@@ -12,7 +12,8 @@
 3. Header
 4. Global Style (body, link color, gap, ul, section-title, overlay etc)
 */
-@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,600");
+/*@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700,800|Oswald:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");*/
 /* ============================== */
 /* Typography
 ================================================== */
@@ -24,7 +25,7 @@ body {
   overflow-x: hidden;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 h1,
@@ -35,7 +36,7 @@ h5,
 h6 {
   font-weight: 700;
   color: #101010;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 h2 {
@@ -91,7 +92,7 @@ button:focus,
   display: -ms-inline-flexbox;
   display: inline-flex;
   border: 1px solid #ee3131;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -144,7 +145,7 @@ button:hover {
   display: block;
   color: #fff;
   font-size: 24px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .download-btn a span {
   font-weight: 400;
@@ -263,7 +264,7 @@ section,
 }
 
 .bg-blue {
-  background-color: #2f3967;
+  background-color: #376BAF;
 }
 
 .bg-red {
@@ -504,14 +505,14 @@ section,
 
 /* Breadcumb */
 .banner-area {
-  min-height: 285px;
+  min-height: 230px;
 }
 .banner-area.bg-overlay:after {
   background: rgba(0, 0, 0, 0.6);
 }
 
 .banner-heading .banner-title {
-  font-size: 60px;
+  font-size: 20px;
   color: #fff;
   padding: 100px 0px;
   font-weight: 400;
@@ -531,11 +532,15 @@ section,
 .breadcrumb li {
   color: #fff;
   font-size: 20px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .breadcrumb li a {
-  color: #ee3131;
+  color: #fff;
 }
+.breadcrumb li a.crumb_active {
+  color: #ff0000;
+}
+
 .breadcrumb li:not(:last-child):after {
   content: "/";
   margin: 0px 5px;
@@ -616,7 +621,7 @@ blockquote p cite {
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   z-index: 2;
   color: #fff;
 }
@@ -663,7 +668,7 @@ blockquote p cite {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   left: 0;
-  min-width: 220px;
+  min-width: 320px;
   border: none;
 }
 .navbar-nav .nav-item .dropdown-menu li {
@@ -678,7 +683,7 @@ blockquote p cite {
   padding: 13px 23px;
   -webkit-transition: all ease 500ms;
   transition: all ease 500ms;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-nav .nav-item .dropdown-menu li a.active {
   color: #fff;
@@ -836,7 +841,7 @@ blockquote p cite {
   font-weight: 700;
   font-size: 15px;
   border: 1px solid #ee3131;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   position: relative;
   z-index: 2;
   height: 50px;
@@ -1294,7 +1299,8 @@ blockquote p cite {
   width: 100%;
   height: 4px;
   content: "";
-  background: #2f3967;
+  background: #376BAF;
+  /*background: #376BAF;*/
 }
 
 .top-bar-angle {
@@ -1306,7 +1312,7 @@ blockquote p cite {
   z-index: -1;
   content: "";
   position: absolute;
-  background: #2f3967;
+  background: #376BAF;
   display: block;
   width: 68%;
   height: 100%;
@@ -1318,8 +1324,8 @@ blockquote p cite {
   position: absolute;
   right: 68%;
   z-index: 0;
-  border-right: 65px solid #2f3967;
-  border-left: 0 solid #2f3967;
+  border-right: 65px solid #376BAF;
+  border-left: 0 solid #376BAF;
   border-bottom: 40px solid transparent;
   bottom: 0;
   top: 0;
@@ -1566,7 +1572,7 @@ blockquote p cite {
   padding: 5px 0;
 }
 .cart-link form .search-box input::-webkit-input-placeholder {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   color: #101010;
   padding-left: 10px;
@@ -1575,7 +1581,7 @@ blockquote p cite {
   letter-spacing: 0.5px;
 }
 .cart-link form .search-box input::-moz-placeholder {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   color: #101010;
   padding-left: 10px;
@@ -1584,7 +1590,7 @@ blockquote p cite {
   letter-spacing: 0.5px;
 }
 .cart-link form .search-box input:-ms-input-placeholder {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   color: #101010;
   padding-left: 10px;
@@ -1593,7 +1599,7 @@ blockquote p cite {
   letter-spacing: 0.5px;
 }
 .cart-link form .search-box input::-ms-input-placeholder {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   color: #101010;
   padding-left: 10px;
@@ -1602,7 +1608,7 @@ blockquote p cite {
   letter-spacing: 0.5px;
 }
 .cart-link form .search-box input::placeholder {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   color: #101010;
   padding-left: 10px;
@@ -1651,14 +1657,14 @@ blockquote p cite {
 }
 
 .slider-content h1 {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 60px;
   color: #fff;
   margin-bottom: 25px;
   text-transform: uppercase;
 }
 .slider-content h1 small {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 20px;
   color: #fff;
   display: block;
@@ -1714,7 +1720,7 @@ blockquote p cite {
 }
 
 .ts-intro-wrapper {
-  background: #2f3967;
+  background: #376BAF;
   padding: 35px 35px 85px 40px;
   min-height: 311px;
   border-radius: 5px;
@@ -1755,7 +1761,7 @@ blockquote p cite {
   font-size: 24px;
   color: #fff;
   text-align: center;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin-bottom: 35px;
 }
 .intro-content h2 span {
@@ -1776,12 +1782,12 @@ blockquote p cite {
   width: 165px;
   text-align: left;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
 .intro-content li span {
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
 
@@ -1883,7 +1889,7 @@ blockquote p cite {
 .feature-single .feature-icon {
   float: left;
   font-size: 50px;
-  color: #2f3967;
+  color: #376BAF;
 }
 .feature-single .feature-content {
   margin-left: 80px;
@@ -2152,7 +2158,7 @@ blockquote p cite {
   right: 40px;
   top: 25px;
   font-size: 80px;
-  font-family: dosis;
+  font-family: Oswald;
   font-weight: 600;
   color: #444444;
 }
@@ -2222,7 +2228,7 @@ blockquote p cite {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: #101010;
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 24px;
 }
@@ -2321,7 +2327,7 @@ blockquote p cite {
   margin-top: 0px;
 }
 .contactMe input {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #999999;
   font-size: 16px;
   padding: 0 20px;
@@ -2989,9 +2995,9 @@ blockquote p cite {
   left: 0;
   width: 100%;
   height: 105%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 57, 103, 0)), color-stop(54%, rgba(0, 0, 0, 0.54)), to(#2f3967));
-  background: linear-gradient(to bottom, rgba(47, 57, 103, 0) 0%, rgba(0, 0, 0, 0.54) 54%, #2f3967 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f3967', endColorstr='#2f3967', GradientType=0);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 57, 103, 0)), color-stop(54%, rgba(0, 0, 0, 0.54)), to(#376BAF));
+  background: linear-gradient(to bottom, rgba(47, 57, 103, 0) 0%, rgba(0, 0, 0, 0.54) 54%, #376BAF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00376BAF', endColorstr='#376BAF', GradientType=0);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -3029,7 +3035,7 @@ blockquote p cite {
   color: #666;
   font-size: 14px;
   margin-top: 6px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .ts-team-info .team-content .team-text p {
   margin-bottom: 0;
@@ -3251,7 +3257,7 @@ blockquote p cite {
   width: 75px;
   height: 75px;
   text-align: center;
-  background: #2f3967;
+  background: #376BAF;
   display: block;
   line-height: 75px;
   color: #fff;
@@ -3707,7 +3713,7 @@ blockquote p cite {
 }
 .sidebar .widget.widget-download {
   padding: 27px 35px;
-  background: #2f3967;
+  background: #376BAF;
 }
 .sidebar .widget.widget-search {
   padding: 0;
@@ -3920,7 +3926,7 @@ blockquote p cite {
 }
 .post .post-quote-content .entry-header .entry-title a {
   color: #666666;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
 .post .post-quote-content .post-meta {
@@ -3988,7 +3994,7 @@ blockquote p cite {
 }
 
 .contact-details {
-  background: #2f3967;
+  background: #376BAF;
   padding: 52px 40px 38px;
 }
 .contact-details h2.column-title {
@@ -4006,7 +4012,7 @@ blockquote p cite {
 .contact-details p {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin-top: 15px;
   color: #fff;
 }
@@ -4047,7 +4053,7 @@ blockquote p cite {
   justify-content: space-between;
 }
 .quote-ratings .service-name {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .testimonial-item-single {
@@ -4260,7 +4266,7 @@ blockquote p cite {
   margin-bottom: 45px;
 }
 .plan.plan-highlight {
-  background: #2f3967;
+  background: #376BAF;
   color: #fff;
 }
 .plan.plan-highlight .plan-name {
@@ -4289,7 +4295,7 @@ blockquote p cite {
   left: -1px;
   top: 0px;
   border-style: solid;
-  border-color: transparent transparent transparent #2f3967;
+  border-color: transparent transparent transparent #376BAF;
   border-width: 16px 0 16px 12px;
 }
 
@@ -4305,7 +4311,7 @@ blockquote p cite {
 }
 .ts-pricing-table-standard .plan .plan-price span {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: italic;
   display: block;
@@ -4360,7 +4366,7 @@ blockquote p cite {
   padding-left: 45px;
 }
 .card .card-button a {
-  font-family: "Dosis", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   color: #101010;
   -webkit-transition: all 0.3s;

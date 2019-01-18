@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('service/<name_slug>', views.service, name='service'),
 
 
     # path('login/', views.login, name='login'),

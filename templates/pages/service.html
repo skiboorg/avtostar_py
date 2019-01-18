@@ -1,0 +1,94 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+   <div class="banner-area bg-overlay" id="banner-area" style="background-image:url({{ service.head_image.url }});    background-size: cover;">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="banner-heading">
+                  <h1 class="banner-title">{{ service.head_description }}</h1>
+                  <ol class="breadcrumb">
+                     <li>Главная</li>
+                     <li><a href="#">Сервисы</a></li>
+                      <li class="crumb_active"><a href="#">{{ service.name.lower.capitalize }}</a></li>
+                  </ol><!-- Breadcumb End -->
+               </div><!-- Banner Heading end -->
+            </div><!-- Col end-->
+         </div><!-- Row end-->
+      </div><!-- Container end-->
+   </div><!-- Banner area end-->
+
+   <section id="main-container" class="main-container pb-120">
+      <div id="ts-service-details" class="ts-service-detials">
+         <div class="container">
+            <div class="row">
+
+               <div class="col-lg-3 col-md-12">
+
+                  <div class="sidebar sidebar-left">
+
+                     <div class="widget no-padding no-border">
+                        <ul class="service-menu unstyled">
+                           <li><a href="#">Engine Diagnostics</a></li>
+                           <li><a href="#">Lube, Oil and Filters</a></li>
+                           <li><a href="#">Air Conditioning Evac</a></li>
+                           <li><a href="#">Anti-Lock Brake Service</a></li>
+                           <li><a href="#">Computer Diagnostics</a></li>
+                           <li><a href="#">Performance Upgrades</a></li>
+                        </ul>
+                     </div>
+
+                     <div class="widget widget-download">
+                        <h3 class="download-btn">
+                           <a href="#"><span>Brand</span> Brochure<i class="fa fa-download"></i></a>
+                        </h3>
+                        <p>queueing theory, and comp utational methods </p>
+                     </div>
+
+                     <div class="widget">
+                        <h3 class="widget-title"><span>Working</span> Hours</h3>
+                        <ul class="unstyled service-time">
+                           <li>
+                              <span>Monday</span>
+                              <span>7.00 - 16.30</span>
+                           </li>
+                           <li>
+                              <span>Tuesday</span>
+                              <span>7.00 - 16.00</span>
+                           </li>
+                           <li>
+                              <span>Wednesday</span>
+                              <span>7.00 - 16.20</span>
+                           </li>
+                           <li>
+                              <span>Thursday</span>
+                              <span>7.00 - 16.00</span>
+                           </li>
+                           <li>
+                              <span>Friday</span>
+                              <span>7.00 - 16.20</span>
+                           </li>
+                           <li>
+                              <span>Saturday</span>
+                              <span>7.00 - 16.10</span>
+                           </li>
+                        </ul>
+                     </div> <!-- Widget End -->
+
+                  </div><!-- Sidebar end -->
+               </div><!-- Sidebar Col end -->
+
+               <div class="col-lg-9 col-md-12">
+                  <div class="ts-service-content">
+                {{ service.full_description|safe }}
+                  </div> <!-- Service content end -->
+
+               </div> <!-- Col end -->
+            </div><!-- Main row end -->
+
+         </div><!-- Container end -->
+      </div><!-- Service details end -->
+      </section><!-- Main container end -->
+{% endblock %}
