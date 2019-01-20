@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from pages.models import Service
+from pages.models import Service , Banner, Image
 
 def index(request):
+    banners = Banner.objects.filter(is_active=True).order_by('order')
+    services = Service.objects.filter(show_at_home=True)
+    images = Image.objects.all()
 
 
     return render(request, 'pages/index.html', locals())

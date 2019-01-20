@@ -864,7 +864,7 @@ blockquote p cite {
 }
 .contactMe > section {
   border-radius: 0;
-  padding: 40px;
+  /*padding: 40px;*/
 }
 .contactMe input {
   height: 50px;
@@ -2301,13 +2301,13 @@ blockquote p cite {
 
 /* Contact us */
 .ts-main-form > section {
-  padding-left: 30px;
-  padding-right: 30px;
+  /*padding-left: 30px;*/
+  /*padding-right: 30px;*/
 }
 .ts-main-form > section .form-row > .col,
 .ts-main-form > section .form-row > [class*=col-] {
-  padding-right: 5px;
-  padding-left: 20px;
+  /*padding-right: 5px;*/
+  /*padding-left: 20px;*/
 }
 .ts-main-form .add_service_link {
   font-weight: 700;
@@ -2323,7 +2323,7 @@ blockquote p cite {
   clear: both;
 }
 .contactMe .btn {
-  float: right;
+  float: left;
   margin-top: 0px;
 }
 .contactMe input {
@@ -2666,7 +2666,7 @@ blockquote p cite {
 
 /* Footer */
 .footer {
-  background: #06163a;
+  background: #376BAF;
   position: relative;
 }
 
@@ -2753,7 +2753,7 @@ blockquote p cite {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/pattern/footer_img.png);
+  /*background: url(../images/pattern/footer_img.png);*/
   background-size: cover;
   background-position: bottom left;
 }
@@ -2841,7 +2841,7 @@ blockquote p cite {
 
 .copyright {
   position: relative;
-  background: #030e28;
+  background: #345f98;
   padding: 23px 0;
 }
 .copyright .copyright-info {
@@ -3341,8 +3341,8 @@ blockquote p cite {
   margin-bottom: 2px;
 }
 .ts-gallery .img-gallery .gallery-popup .gallery-content p {
-  font-style: italic;
-  color: #999;
+  /*font-style: italic;*/
+  color: #fff;
   margin-bottom: 0;
 }
 .ts-gallery .img-gallery:hover a:after {

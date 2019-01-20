@@ -10,437 +10,159 @@
 
 
    <div class="ts-slider-area owl-carousel">
-      <div class="slider-items slider-overlay" style="background: url(images/slider/slider-1.jpg)">
+   {% for banner in banners %}
+      <div class="slider-items slider-overlay" style="background: url({{ banner.image.url }})">
          <div class="container">
             <div class="row align-items-center">
                <div class="col-lg-8 col-md-12">
                   <div class="slider-content">
                      <h1>
-                        <small>We give you</small>
-                        Quality <span>Auto Repair</span>
+                        <small>{{ banner.small_text }}</small>
+                        {{ banner.big_text }}
                      </h1>
-                     <p class="slider-desc">Auto Painting &amp; Collision Repair Shop. We help you turn the car you drive back into the car you love!</p>
-                     <a href="#" class="btn btn-primary">Get Appointment</a>
+                  {% if banner.description %}
+                     <p class="slider-desc">{{ banner.description }}</p>
+                   {% endif %}
+                      {% if banner.post %}
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                      {% endif %}
+
                   </div> <!-- Slider Content End -->
                </div> <!-- Col End -->
             </div> <!-- Row ENd -->
          </div> <!-- Container End -->
       </div> <!-- 1st Slider -->
-      <div class="slider-items slider-overlay" style="background: url(images/slider/slider-2.jpg)">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-lg-8 col-md-12">
-                  <div class="slider-content">
-                     <h1>
-                        <small>The Best</small>
-                        Repair <span>& Maintenance</span>
-                     </h1>
-                     <p class="slider-desc">Auto Painting &amp; Collision Repair Shop. We help you turn the car you drive back into the car you love!</p>
-                     <a href="#" class="btn btn-primary">
-                        Get Appointment
-                     </a>
-                  </div> <!-- Slider Content End -->
-               </div> <!-- Col End -->
-            </div> <!-- Row ENd -->
-         </div> <!-- Container End -->
-      </div> <!-- 1st Slider -->
-      <div class="slider-items slider-overlay" style="background: url(images/slider/slider-3.jpg)">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-lg-8 col-md-12">
-                  <div class="slider-content">
-                     <h1>
-                        <small>We Ensure</small>
-                        Commitment  <span>to Quality</span>
-                     </h1>
-                     <p class="slider-desc">Auto Painting &amp; Collision Repair Shop. We help you turn the car you drive back into the car you love!</p>
-                     <a href="#" class="btn btn-primary">
-                        Get Appointment
-                     </a>
-                  </div> <!-- Slider Content End -->
-               </div> <!-- Col End -->
-            </div> <!-- Row ENd -->
-         </div> <!-- Container End -->
-      </div> <!-- 1st Slider -->
+   {% endfor %}
+
 
    </div> <!-- Slider Area End -->
 
+<section id="main-container" class="main-container pb-0">
+      <div class="ts-about-us">
+         <div class="container">
 
-   <section id="ts-intro" class="ts-intro pb-0">
-      <div class="container">
-         <div class="row no-gutters">
-            <div class="col-lg-4 col-md-12">
-               <div class="ts-intro-wrapper">
-                  <div class="intro-content">
-                     <h2><span>Contact</span> Details</h2>
-                     <ul>
-                        <li>
-                           <span>Call us :</span>
-                           <p class="intro-info">+(91) 458 654 528</p>
-                        </li>
-                        <li>
-                           <span>Find us :</span>
-                           <p class="intro-info">1014 Retreat Avenue Birmingham, AL 35203</p>
-                        </li>
-                        <li>
-                           <span>Work time :</span>
-                           <p class="intro-info">Mon - Sat 7.00 - 18.30 Sunday Closed Call us for emergency</p>
-                        </li>
-                     </ul><!-- Ul List -->
-                  </div><!-- Intro Content -->
-                  <i class="icon icon-phone3"></i>
-               </div><!-- Intro Wrapper -->
-            </div><!-- Col End -->
-            <div class="col-lg-4 col-md-12">
-               <div class="ts-intro-wrapper highlight">
-                  <div class="intro-content">
-                     <h2><span>Get</span> 30% Discount</h2>
-                     <div class="intro-form">
-                        <!-- START copy section: General Contact Form -->
-                        <form class="contactMe small text-center" action="contactme/contact-form.php" method="POST" enctype="multipart/form-data">
-                              <div class="form-row">
-                                 <div class="col-md-12">
-                                    <input type="text" name="name" data-displayname="Name" class="field" placeholder="Name*" required>
-                                 </div>
-                              </div>
-                              <div class="form-row form-row-second">
-                                 <div class="col-lg-6 col-md-12">
-                                    <input type="email" name="email" data-displayname="Email" class="field" placeholder="Email*" required>
-                                 </div>
-                                 <div class="col-lg-6 col-md-12">
-                                    <select name="service" data-displayname="service" class="field select2-hidden-accessible">
-                                       <option value="information">Information</option>
-                                       <option value="support request">Support request</option>
-                                       <option value="other">Other ...</option>
-                                    </select>
-                                 </div>
-                              </div>
-                              <!-- Google reCAPTCHA -->
-                              <!-- Create a site key for your website: https://www.google.com/recaptcha -->
-                              <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
-                              <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
-                              <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-                              <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
-                              <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-
-                              <div class="msg "></div>
-
-                              <button class="btn btn-bordered" type="submit" data-sending="Sending...">get discount</button>
-                        </form>
-                        <!-- END copy section: General Contact Form -->
-                     </div><!-- Intro Form -->
-                  </div><!-- Intro Content -->
-                  <i class="icon-percentage"></i>
-               </div><!-- Intro Wrapper -->
-            </div><!-- COl End -->
-            <div class="col-lg-4 col-md-12">
-               <div class="ts-intro-wrapper intro-carousel">
-                  <div class="intro-content-carousel owl-carousel">
-                     <div class="intro-content">
-                        <h2><span>Vehicle</span> Tips</h2>
-                        <div class="intro-carousel">
-                           <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your vehicles
-                              , it will keep you safe.</p>
-                        </div>
-                     </div><!-- Intro Content End -->
-                     <div class="intro-content">
-                        <h2>Vehicle <span>Tips</span></h2>
-                        <div class="intro-carousel">
-                           <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your vehicles
-                              , it will keep you safe.</p>
-                        </div>
-                     </div><!-- Intro Content End -->
-                  </div><!-- Intro Carousel end -->
-                  <i class="icon-solution"></i>
-               </div><!-- Intro Wrapper End -->
-            </div><!-- Col End -->
-         </div>
-         <!-- Main Row End -->
-      </div>
-      <!-- Container End -->
+            <div class="row overflow-hidden no-gutters">
+               <div class="col-lg-7 col-md-12">
+                  <div class="box-skew-hidden-left">
+                        <div class="box-skew-left">
+                           <img class="img-fluid" src="{% static 'images/home1.jpg' %}" alt="">
+                        </div><!-- Box skew left -->
+                  </div>
+               </div> <!-- Col End -->
+               <div class="col-lg-5 col-md-12">
+                  <div class="box-skew-right">
+                        <div class="box-content-wrapper">
+                           <i class="icon-repair"></i>
+                           <h2 class="column-title no-border">
+                              35 лет опыта
+                           </h2>
+                           <p>Спектр наших услуг поразит Вас своим разнообразием! Мы осуществляем технический ремонт и обслуживание Вашего автомобиля в короткие сроки, а качество работы наших сотрудников оставит
+                               довольным любого, даже самого взыскательного клиента!</p>
+                        </div> <!-- Content wrapper end -->
+                  </div> <!-- Content Right End -->
+               </div> <!-- Col end -->
+            </div> <!-- Row End -->
+         </div> <!-- Container Fluid -->
+      </div><!-- Ts About Us end -->
    </section>
+
    <!-- Intro End -->
 
-   <section id="ts-feature" class="ts-feature pb-0">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <h2 class="section-title">
-                  <span>Why</span> Choose Us
-               </h2>
-            </div><!-- Col end -->
-         </div><!-- Row End -->
-         <div class="row">
-            <div class="col-lg-8 col-md-12">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="ts-feature-wrapper">
-                        <div class="feature-single">
-                           <span class="feature-icon">
-                              <i class="icon-mechanic"></i>
-                           </span><!-- feature icon -->
-                           <div class="feature-content">
-                              <h3><span>Expert</span> Mechanics</h3>
-                              <p>Most of the vehicles get damaged just because of maintenance neglect you take</p>
-                           </div><!-- feature content end -->
-                        </div><!-- feature single end -->
-                     </div><!-- feature wrapper end -->
-                  </div><!-- Col end -->
-                  <div class="col-md-6">
-                     <div class="ts-feature-wrapper">
-                        <div class="feature-single">
-                           <span class="feature-icon">
-                              <i class="icon-price"></i>
-                           </span><!-- feature icon -->
-                           <div class="feature-content">
-                              <h3><span>Reasonable</span> Price</h3>
-                              <p>Most of the vehicles get damaged just because of maintenance neglect you take</p>
-                           </div><!-- feature content end -->
-                        </div><!-- feature single end -->
-                     </div><!-- feature wrapper end -->
-                  </div><!-- Col end -->
-               </div><!-- Content Row End -->
-               <div class="gap-35"></div>
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="ts-feature-wrapper">
-                        <div class="feature-single">
-                           <span class="feature-icon">
-                              <i class="icon-client"></i>
-                           </span><!-- feature icon -->
-                           <div class="feature-content">
-                              <h3><span>Trusted</span> by 5000 Clients</h3>
-                              <p>Most of the vehicles get damaged just because of maintenance neglect you take</p>
-                           </div><!-- feature content end -->
-                        </div><!-- feature single end -->
-                     </div><!-- feature wrapper end -->
-                  </div><!-- Col end -->
-                  <div class="col-md-6">
-                     <div class="ts-feature-wrapper">
-                        <div class="feature-single">
-                           <span class="feature-icon">
-                              <i class="icon-fast"></i>
-                           </span><!-- feature icon -->
-                           <div class="feature-content">
-                              <h3><span>Fast</span> feature Delivery</h3>
-                              <p>Most of the vehicles get damaged just because of maintenance neglect you take</p>
-                           </div><!-- feature content end -->
-                        </div><!-- feature single end -->
-                     </div><!-- feature wrapper end -->
-                  </div><!-- Col end -->
-               </div><!-- Content Row End -->
-            </div><!-- Col End -->
-         </div><!-- Row End -->
-      </div><!-- Container end -->
-      <div class="feature-img">
-         <img class="img-fluid" src="images/why_choose_us_img.png" alt="">
-      </div><!-- feature Img -->
-   </section><!-- Ts feature end -->
+    <div style="margin-top: 80px;" class="container">
 
-   <section id="ts-about" class="ts-about">
+         <div class="row">
+            <div class="col-md-6">
+               <h2 class="section-title">
+                  Наши услуги
+               </h2>
+
+            </div><!-- Col end -->
+            <div class="col-md-6">
+
+               <button class="btn btn-primary" >Посмотреть все услуги</button>
+            </div><!-- Col end -->
+
+
+         </div><!-- Row End -->
+
+         <div class="row">
+             {% for service in services %}
+            <div class="col-lg-4 col-md-12">
+               <div style="margin-bottom: 30px;" class="ts-service-wrapper">
+                     <span class="service-img">
+                        <img class="img-fluid" src="{{ service.image.url }}" alt="">
+                     </span> <!-- Service Img end -->
+                     <div class="service-content">
+                        <div class="service-icon">
+                           <i class="{{ service.icon }}"></i>
+                        </div> <!-- Service icon end -->
+                        <h3><a href="{% url 'service' service.name_slug %}">{{ service.name }}</a></h3>
+                        <p>{{ service.short_description }}</p>
+                        <a href="{% url 'service' service.name_slug %}" class="readmore">Подробнее<i class="fa fa-angle-double-right"></i></a>
+                     </div> <!-- Service content end -->
+                  </div> <!-- Service wrapper end -->
+            </div> <!-- Col end -->
+          {% endfor %}
+         </div><!-- Row end -->
+
+		</div>
+
+
+
+  <section id="ts-newsletter" class="ts-newsletter">
       <div class="container-fluid no-padding">
          <div class="row">
-            <div class="col-lg-7 col-md-12">
-               <div class="box-skew-hidden-left">
-                  <div class="box-skew-left">
-                       <div class="box-skew-img">
-                           <img class="img-fluid" src="images/about/about-img1.jpg" alt="">
-                       </div>
-                     <div class="box-content-wrapper">
-                        <h2 class="column-title">
-                           <small>Come before 21st Feb</small>
-                           <span>Get</span> Upto 30% Rewards
-                        </h2>
-                        <p>Auto Painting & Collision Repair Shop. We help you turn the car you drive back into the car you love!</p>
-                        <a href="#" class="btn btn-primary">Claim Reward</a>
-                     </div> <!-- Content wrapper end -->
-                  </div> <!-- Content left ebd -->
-               </div>
-            </div> <!-- Col End -->
-            <div class="col-lg-5 col-md-12">
-               <div class="box-skew-right bg-red">
-                  <div class="box-content-wrapper">
-                     <h2 class="column-title">
-                        <span>About</span> Automobil
+            <div class="col-md-6 align-self-center">
+               <div class="box-skew-area-left bg-red">
+                  <div class="box-skew-sm-left">
+                     <h2 class="column-title text-white">
+                        Каждое воскресенье
                      </h2>
-                     <p>Most of the vehicles get damaged just because of maintenance neglect you take. get damaged</p>
-                     <ul class="unstyled list-round">
-                        <li>The vehicles get damaged just because of mainte</li>
-                        <li>The Big Oxmox advised her not to do vehicles</li>
-                        <li>The Little Blind Text didn’t listen herself</li>
-                        <li>Alphabet Village and the subline of </li>
-                     </ul> <!-- List Round end -->
-                  </div> <!-- Content wrapper end -->
-                  <img src="images/about/about_img.png" alt="">
-               </div> <!-- Content Right End -->
+
+                  </div> <!-- Newsletter Content end -->
+               </div> <!-- Newsletter Left end -->
+            </div> <!-- Col End -->
+            <div class="col-md-6">
+               <div class="box-skew-area-right">
+                  <div class="box-skew-sm-right">
+                        <img src="{% static 'images/home2.jpg' %}" alt="">
+                     <h2 class="column-title text-white no-border">
+                        <small>На все наши услкги и запчасти</small>
+                        СКИДКА 10%
+                     </h2>
+                     <a href="#" class="btn btn-primary">Подробнее</a>
+                  </div> <!-- Newsletter content end -->
+               </div> <!-- Newsletter right end -->
             </div> <!-- Col end -->
          </div> <!-- Row End -->
-      </div> <!-- Container Fluid -->
-   </section> <!-- About End -->
+      </div> <!-- Container fluid end -->
+   </section> <!-- Newsletter End -->
 
-   <section id="ts-working-process" class="ts-working-process">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <h2 class="section-title">
-                  <span>Our</span> Working Process
-               </h2>
-            </div><!-- Col end -->
-         </div><!-- Row End -->
-         <div class="row working-box-wrapper">
-            <div class="col-lg-4 col-md-12">
-               <div class="working-single-box">
-                  <div class="working-content-wrapper">
-                     <span class="workig-icon">
-                        <i class="icon-request_quote"></i>
-                     </span>
-                     <div class="working-content">
-                        <h3><span>Request</span> Quote</h3>
-                        <p>Most of the vehicles get damage just because of maintain</p>
-                     </div> <!-- Working Content -->
-                  </div> <!-- Working wrapper -->
-               </div> <!-- Working single box -->
-            </div><!-- Col End -->
-            <div class="col-lg-4 col-md-12">
-               <div class="working-single-box bg-red">
-                  <div class="working-content-wrapper">
-                     <span class="workig-icon">
-                        <i class="icon-car_1"></i>
-                     </span>
-                     <div class="working-content">
-                        <h3><span>Bring</span> Your Vehicle</h3>
-                        <p>Most of the vehicles get damage just because of maintain</p>
-                     </div> <!-- Working Content -->
-                  </div> <!-- Working wrapper -->
-               </div> <!-- Working single box -->
-            </div><!-- Col End -->
-            <div class="col-lg-4 col-md-12">
-               <div class="working-single-box bg-red-light">
-                  <div class="working-content-wrapper">
-                     <span class="workig-icon">
-                        <i class="icon-car_2"></i>
-                     </span>
-                     <div class="working-content">
-                        <h3><span>Get</span> It Repaired</h3>
-                        <p>Most of the vehicles get damage just because of maintain</p>
-                     </div> <!-- Working Content -->
-                  </div> <!-- Working wrapper -->
-               </div> <!-- Working single box -->
-            </div><!-- Col End -->
-         </div> <!-- Row End -->
-      </div> <!-- Container end -->
-   </section> <!-- Working process end -->
-
-   <section id="ts-service-bg" class="ts-service-bg bg-overlay">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <h2 class="section-title text-white">
-                  <span>Services</span> We Provide
-               </h2>
-            </div> <!-- Col End -->
-         </div> <!-- Row End -->
-      </div><!-- Container end -->
-   </section> <!-- Service BG end -->
-
-   <section id="ts-service" class="ts-service pb-0">
-      <div class="container">
-         <div class="row">
-            <div class="service-carousel owl-carousel">
-               <div class="col-md-12">
-                  <div class="ts-service-wrapper">
-                     <span class="service-img">
-                        <img class="img-fluid" src="images/service/service_img1.jpg" alt="">
-                     </span> <!-- Service Img end -->
-                     <div class="service-content">
-                        <div class="service-icon">
-                           <i class="icon-engine"></i>
-                        </div> <!-- Service icon end -->
-                        <h3><a href="#">Engine Diagnostics</a></h3>
-                        <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your.</p>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Service content end -->
-                  </div> <!-- Service wrapper end -->
-               </div> <!-- Col end -->
-               <div class="col-md-12">
-                  <div class="ts-service-wrapper">
-                     <span class="service-img">
-                        <img class="img-fluid" src="images/service/service_img2.jpg" alt="">
-                     </span> <!-- Service Img end -->
-                     <div class="service-content">
-                        <div class="service-icon">
-                           <i class="icon-oil"></i>
-                        </div> <!-- Service icon end -->
-                        <h3><a href="#">Lube, Oil and Filters</a></h3>
-                        <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your.</p>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Service content end -->
-                  </div> <!-- Service wrapper end -->
-               </div> <!-- Col end -->
-               <div class="col-md-12">
-                  <div class="ts-service-wrapper">
-                     <span class="service-img">
-                        <img class="img-fluid" src="images/service/service_img3.jpg" alt="">
-                     </span> <!-- Service Img end -->
-                     <div class="service-content">
-                        <div class="service-icon">
-                           <i class="icon-air_conditioning"></i>
-                        </div> <!-- Service icon end -->
-                        <h3><a href="#">Air Conditioning Evac</a></h3>
-                        <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your.</p>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Service content end -->
-                  </div> <!-- Service wrapper end -->
-               </div> <!-- Col end -->
-               <div class="col-md-12">
-                  <div class="ts-service-wrapper">
-                     <span class="service-img">
-                        <img class="img-fluid" src="images/service/service_img1.jpg" alt="">
-                     </span> <!-- Service Img end -->
-                     <div class="service-content">
-                        <div class="service-icon">
-                           <i class="fa fa-home"></i>
-                        </div> <!-- Service icon end -->
-                        <h3><a href="#">Engine Diagnostics</a></h3>
-                        <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your.</p>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Service content end -->
-                  </div> <!-- Service wrapper end -->
-               </div> <!-- Col end -->
-               <div class="col-md-12">
-                  <div class="ts-service-wrapper">
-                     <span class="service-img">
-                        <img class="img-fluid" src="images/service/service_img2.jpg" alt="">
-                     </span> <!-- Service Img end -->
-                     <div class="service-content">
-                        <div class="service-icon">
-                           <i class="fa fa-home"></i>
-                        </div> <!-- Service icon end -->
-                        <h3><a href="#">Lube, Oil and Filters</a></h3>
-                        <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your.</p>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Service content end -->
-                  </div> <!-- Service wrapper end -->
-               </div> <!-- Col end -->
-               <div class="col-md-12">
-                  <div class="ts-service-wrapper">
-                     <span class="service-img">
-                        <img class="img-fluid" src="images/service/service_img3.jpg" alt="">
-                     </span> <!-- Service Img end -->
-                     <div class="service-content">
-                        <div class="service-icon">
-                           <i class="fa fa-home"></i>
-                        </div> <!-- Service icon end -->
-                        <h3><a href="#">Air Conditioning Evac</a></h3>
-                        <p>Most of the vehicles get damaged just because of maintenance neglect. If you take care of your.</p>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Service content end -->
-                  </div> <!-- Service wrapper end -->
-               </div> <!-- Col end -->
-            </div> <!-- Service Carousel -->
-         </div> <!-- Row End -->
-      </div> <!-- Container end -->
-   </section> <!-- Service end -->
+<div style="margin-top: 80px;" class="ts-gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-title">
+                            Наши последние работы
+                        </h2>
+                    </div><!-- Col end -->
+                </div><!-- Row End -->
+                <div class="row">
+                    {% for image in images %}
+                  <div class="col-lg-4 col-md-6">
+                  <div class="img-gallery">
+                     <a class="gallery-popup" href="{{ image.image.url }}" title="{{ image.big_text }} {{ image.small_text }}">
+                        <img class="img-fluid" src="{{ image.image.url }}" alt="">
+                           <div class="gallery-content">
+                                <h3>{{ image.big_text }}</h3>
+                                <p>{{ image.small_text }}</p>
+                           </div>
+                     </a>
+                  </div>
+                  </div><!-- Col end -->
+          {% endfor %}
+            </div><!-- Container End -->
+        </div>
 
    <section id="ts-appointment" class="ts-appointment pb-0">
       <div class="container">
@@ -449,63 +171,39 @@
                <div class="row">
                   <div class="col-md-12">
                      <h2 class="section-title">
-                        <span>Book</span> An Appointment
+                        Есть вопросы?
                      </h2>
+                         <p>Оставьте Ваш номер и мы перезвоним</p>
                   </div> <!-- Col End -->
                </div> <!-- Row end -->
                <div class="row">
                   <div id="contact-form" class="form-container col-lg-12">
                      <!-- START copy section: Hotel Contact Form -->
-                     <form class="contactMe ts-main-form" action="contactme/service-contact-form.php" method="POST" enctype="multipart/form-data">
-                        <section>
-                           <div class="form-row">
-                              <div class="col-lg-6">
-                                 <input type="text" name="name" data-displayname="Name" class="field" placeholder="Name" required>
-                              </div>
-                              <div class="col-lg-6">
-                                 <input type="tel" name="phone" data-displayname="Phone" class="field" placeholder="Number" required>
-                              </div>
-                           </div>
-                           <div class="form-row">
-                              <div class="col-md-6">
-                                 <input type="email" name="email" data-displayname="E-mail" class="field" placeholder="Email" required>
-                              </div>
-                              <div class="col-md-6">
-                                 <select name="brand" class="field" data-displayname="Brand">
-                                    <option value="title">Car Brand</option>
-                                    <option value="bmw">BMW</option>
-                                    <option value="toyota">TOYOTA</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <div class="form-row">
-                              <div class="col-md-6">
-                                 <input type="text" name="date" id="date-start-1" data-displayname="Date" class="field cm-date" data-idconnecteddateend="date-end-1" required>
-                              </div>
-                              <div class="col-md-6">
-                                    <select name="service" class="field">
-                                       <option value="title">Select Service</option>
-                                       <option value="Engine">Engine Diagnostics</option>
-                                       <option value="Lube">Lube, Oil and Filters</option>
-                                       <option value="Air">Air Conditioning Evac</option>
-                                    </select>
-                              </div>
-                           </div>
+                     <form class="contactMe ts-main-form" action="" method="POST" >
 
-                           <!-- Google reCAPTCHA -->
-                           <!-- Create a site key for your website: https://www.google.com/recaptcha -->
-                           <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
-                           <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
-                           <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-                           <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
-                           <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+                           <div class="form-row">
+                              <div class="col-lg-4">
+                                 <input type="text" name="name" data-displayname="Name" class="field" placeholder="Ваше имя" required>
+                              </div>
+                              <div class="col-lg-4">
+                                 <input type="tel" id="phone_input" name="phone" data-displayname="Phone" class="field" placeholder="Ваш телефон" required>
+                              </div>
+
+                           </div>
+                       <div class="form-group">
+                      <label class="fancy-checkbox">
+                        <input style="height: 16px;" type="checkbox" required="required">
+                        <span style="font-size: 16px;
+                            font-weight: bold;">Я даю свое согласие на хранение и обработку моих персональных данных.</span>
+                      </label>
+                    </div>
+                             <button class="btn btn-primary" type="submit" data-sending="Sending...">Жду звонка</button>
 
                            <div class="msg"></div>
 
 
 
-                           <button class="btn btn-primary" type="submit" data-sending="Sending...">Estimate Rate</button>
-                        </section> <!-- Ection end -->
+
                      </form><!-- END copy section:Service Contact Form -->
                   </div><!-- Contact form end -->
                </div> <!-- Row End -->
@@ -514,7 +212,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <h2 class="section-title">
-                        <span>Clients</span> Love
+                        Отзывы клиентов
                      </h2>
                   </div> <!-- Col End -->
                </div><!-- Row End -->
@@ -537,7 +235,7 @@
                               <span class="quote-icon"><i class="icon icon-quote22"></i></span>
                            </div> <!-- Testimonial Body end -->
                            <div class="testimonial-footer">
-                              <img src="images/testimonial/quote_profile.png" alt="" class="img-fluid">
+
                               <div class="client-info">
                                  <h3 class="client-name">Donald Gonzales</h3>
                                  <span class="client-desig">Lead Painter</span>
@@ -560,7 +258,7 @@
                               <span class="quote-icon"><i class="icon icon-quote22"></i></span>
                            </div> <!-- Testimonial Body end -->
                            <div class="testimonial-footer">
-                              <img src="images/testimonial/quote_profile.png" alt="" class="img-fluid">
+
                               <div class="client-info">
                                  <h3 class="client-name">Donald Gonzales</h3>
                                  <span class="client-desig">Lead Painter</span>
@@ -583,7 +281,7 @@
                               <span class="quote-icon"><i class="icon icon-quote22"></i></span>
                            </div> <!-- Testimonial Body end -->
                            <div class="testimonial-footer">
-                              <img src="images/testimonial/quote_profile.png" alt="" class="img-fluid">
+
                               <div class="client-info">
                                  <h3 class="client-name">Donald Gonzales</h3>
                                  <span class="client-desig">Lead Painter</span>
@@ -599,187 +297,8 @@
    </section> <!-- Appoinment end -->
 
 
-   <section id="ts-newsletter" class="ts-newsletter">
-      <div class="container-fluid no-padding">
-         <div class="row">
-            <div class="col-md-6 align-self-center">
-               <div class="box-skew-area-left bg-red">
-                  <div class="box-skew-sm-left">
-                     <h2 class="column-title text-white">
-                        <span>Subscribe</span> For Newsletter
-                     </h2>
-                     <form class="contactMe newsletter-form" action="contactme/newsletter-form.php" method="POST" enctype="multipart/form-data">
-                        <section>
-                           <div class="form-row">
-                              <div class="col-md-12 newsletter-box">
-                                 <input type="email" name="email" data-displayname="E-mail" class="field" placeholder="Your Email" required>
-                                 <button class="btn btn-bordered" type="submit" data-sending="Sending..."><i class="fa fa-send"></i></button>
-                              </div>
-                           </div> <!-- Form Row End -->
-                           <div class="msg"></div>
-                        </section> <!-- Ection end -->
-                     </form><!-- END copy section:Service Contact Form -->
-                  </div> <!-- Newsletter Content end -->
-               </div> <!-- Newsletter Left end -->
-            </div> <!-- Col End -->
-            <div class="col-md-6">
-               <div class="box-skew-area-right">
-                  <div class="box-skew-sm-right">
-                        <img src="images/we_offer_img.jpg" alt="">
-                     <h2 class="column-title text-white no-border">
-                        <small>We offer you</small>
-                        <span>The</span> Best Auto Repair Service
-                     </h2>
-                     <a href="#" class="btn btn-primary">Contact US</a>
-                  </div> <!-- Newsletter content end -->
-               </div> <!-- Newsletter right end -->
-            </div> <!-- Col end -->
-         </div> <!-- Row End -->
-      </div> <!-- Container fluid end -->
-   </section> <!-- Newsletter End -->
 
-   <section id="ts-news" class="ts-news">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <h2 class="section-title">
-                  <span>Our</span> Latest News
-               </h2>
-            </div> <!-- Col End -->
-         </div><!-- Row End -->
-         <div class="row">
-            <div class="col-md-12">
-               <div class="news-carousel owl-carousel">
-                  <div class="ts-latest-post">
-                     <div class="post-media post-image">
-                        <img src="images/news/post-img1.jpg" alt="" class="img-fluid">
-                     </div> <!-- Post Media End -->
-                     <div class="post-body">
-                        <div class="post-date">
-                              <span class="day">21</span>
-                           <span class="month">May</span>
-                        </div> <!-- Post Date End -->
-                        <div class="post-info">
-                           <div class="post-meta">
-                              <img class="avatar" alt="" src="images/news/avatar1.png">
-                              <span class="post-author">By <a href="#">Jhony Rick</a></span>
-                           </div>
-                        </div> <!-- Post Info End -->
-                        <h3 class="post-title">
-                           <a href="#">20th car looking smarter</a>
-                        </h3>
-                        <div class="post-text">
-                           <p>A wonderful serenity taken possession  into entire soul  like to these sweet and mornings </p>
-                        </div>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Post Body End -->
-                  </div> <!-- Latest Post End -->
-                  <div class="ts-latest-post">
-                     <div class="post-media post-image">
-                        <img src="images/news/post-img2.jpg" alt="" class="img-fluid">
-                     </div> <!-- Post Media End -->
-                     <div class="post-body">
-                        <div class="post-date">
-                              <span class="day">18</span>
-                           <span class="month">Jun</span>
-                        </div> <!-- Post Date End -->
-                        <div class="post-info">
-                           <div class="post-meta">
-                              <img class="avatar" alt="" src="images/news/avatar1.png">
-                              <span class="post-author">By <a href="#">Jhony Rick</a></span>
-                           </div>
-                        </div> <!-- Post Info End -->
-                        <h3 class="post-title">
-                           <a href="#">Repaired Unlocking Mystery</a>
-                        </h3>
-                        <div class="post-text">
-                           <p>A wonderful serenity taken possession  into entire soul  like to these sweet and mornings </p>
-                        </div>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Post Body End -->
-                  </div> <!-- Latest Post End -->
-                  <div class="ts-latest-post">
-                     <div class="post-media post-image">
-                        <img src="images/news/post-img3.jpg" alt="" class="img-fluid">
-                     </div> <!-- Post Media End -->
-                     <div class="post-body">
-                        <div class="post-date">
-                              <span class="day">25</span>
-                           <span class="month">Jun</span>
-                        </div> <!-- Post Date End -->
-                        <div class="post-info">
-                           <div class="post-meta">
-                              <img class="avatar" alt="" src="images/news/avatar1.png">
-                              <span class="post-author">By <a href="#">Jhony Rick</a></span>
-                           </div>
-                        </div> <!-- Post Info End -->
-                        <h3 class="post-title">
-                           <a href="#">Protecting Your Auto Repair</a>
-                        </h3>
-                        <div class="post-text">
-                           <p>A wonderful serenity taken possession  into entire soul  like to these sweet and mornings </p>
-                        </div>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Post Body End -->
-                  </div> <!-- Latest Post End -->
-                  <div class="ts-latest-post">
-                     <div class="post-media post-image">
-                        <img src="images/news/post-img2.jpg" alt="" class="img-fluid">
-                     </div> <!-- Post Media End -->
-                     <div class="post-body">
-                        <div class="post-date">
-                              <span class="day">08</span>
-                           <span class="month">Jul</span>
-                        </div> <!-- Post Date End -->
-                        <div class="post-info">
-                           <div class="post-meta">
-                              <img class="avatar" alt="" src="images/news/avatar1.png">
-                              <span class="post-author">By <a href="#">Jhony Rick</a></span>
-                           </div>
-                        </div> <!-- Post Info End -->
-                        <h3 class="post-title">
-                           <a href="#">Auto Repair Basics</a>
-                        </h3>
-                        <div class="post-text">
-                           <p>A wonderful serenity taken possession  into entire soul  like to these sweet and mornings </p>
-                        </div>
-                        <a href="#" class="readmore">Read more<i class="fa fa-angle-double-right"></i></a>
-                     </div> <!-- Post Body End -->
-                  </div> <!-- Latest Post End -->
-               </div><!-- Row end -->
-            </div>
-         </div><!-- Container end -->
-      </div>
-   </section> <!-- News end -->
 
-   <section id="ts-pertner" class="ts-pertner solid-bg">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="partner-carousel owl-carousel">
-                  <figure class="partner-item partner-logo">
-                     <a href="#"><img class="img-fluid" src="images/clients/client-img1.png" alt=""></a>
-                  </figure> <!-- Figure end -->
-                  <figure class="partner-item partner-logo">
-                     <a href="#"><img class="img-fluid" src="images/clients/client-img2.png" alt=""></a>
-                  </figure> <!-- Figure end -->
-                  <figure class="partner-item partner-logo">
-                     <a href="#"><img class="img-fluid" src="images/clients/client-img3.png" alt=""></a>
-                  </figure> <!-- Figure end -->
-                  <figure class="partner-item partner-logo">
-                     <a href="#"><img class="img-fluid" src="images/clients/client-img4.png" alt=""></a>
-                  </figure> <!-- Figure end -->
-                  <figure class="partner-item partner-logo">
-                     <a href="#"><img class="img-fluid" src="images/clients/client-img5.png" alt=""></a>
-                  </figure> <!-- Figure end -->
-                  <figure class="partner-item partner-logo">
-                     <a href="#"><img class="img-fluid" src="images/clients/client-img1.png" alt=""></a>
-                  </figure> <!-- Figure end -->
-               </div> <!-- Partner carousel end -->
-            </div> <!-- Col end -->
-         </div> <!-- Row end -->
-      </div> <!-- Container end -->
-   </section> <!-- Partner end -->
 
 {% endblock %}
 

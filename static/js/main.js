@@ -21,6 +21,7 @@ $(function ($) {
       /* -----------------------------------------
                   prelaoder
       -------------------------------------------- */
+      $("#phone_input").mask("+7(999) 999-9999");
       $('#preloader').addClass('loaded');
 
       $('.prelaoder-btn').on('click', function (e) {
@@ -340,7 +341,7 @@ $(function ($) {
          image: {
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
             titleSrc: function (item) {
-               return item.el.attr('title') + '<small>Credit</small>';
+               return item.el.attr('title') + '<small>АО ПФ АВТОСТАР</small>';
             }
          }
       });

@@ -2,14 +2,14 @@ from django.db import models
 from pytils.translit import slugify
 from ckeditor_uploader.fields import RichTextUploadingField
 
-class ImageTag(models.Model):
-    name = models.CharField(max_length=50, blank=False)
+
 
 
 
 class Image(models.Model):
     image = models.ImageField('Изображение', upload_to='upload_img/', blank=False)
-    tag = models.ForeignKey(ImageTag, blank=True, null=True, on_delete=models.SET_NULL, verbose_name='Тэг')
+    big_text = models.CharField('Большой текст', max_length=255, blank=False, null=True)
+    small_text = models.CharField('Малый текст', max_length=255, blank=False, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
@@ -30,6 +30,7 @@ class Service(models.Model):
     short_description = models.CharField('Короткое описание ',max_length=255, blank=True, null=True)
     full_description = RichTextUploadingField ('Полное описание ', blank=True, null=True)
     is_main_service = models.BooleanField('Основной сервис?', default=True)
+    show_at_home = models.BooleanField('Отображать на главной?', default=False)
 
     def __str__(self):
         return 'Услуга : %s ' % self.name

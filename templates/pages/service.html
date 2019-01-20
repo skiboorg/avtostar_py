@@ -25,7 +25,15 @@
          <div class="container">
             <div class="row">
 
-               <div class="col-lg-3 col-md-12">
+
+
+               <div class="col-lg-9 col-md-12">
+                  <div class="ts-service-content">
+                {{ service.full_description|safe }}
+                  </div> <!-- Service content end -->
+
+               </div> <!-- Col end -->
+                <div class="col-lg-3 col-md-12">
 
                   <div class="sidebar sidebar-left">
 
@@ -79,13 +87,6 @@
 
                   </div><!-- Sidebar end -->
                </div><!-- Sidebar Col end -->
-
-               <div class="col-lg-9 col-md-12">
-                  <div class="ts-service-content">
-                {{ service.full_description|safe }}
-                  </div> <!-- Service content end -->
-
-               </div> <!-- Col end -->
             </div><!-- Main row end -->
 
          </div><!-- Container end -->
