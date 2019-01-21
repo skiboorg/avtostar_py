@@ -20,7 +20,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('service/<name_slug>', views.service, name='service'),
+    path('service/<name_slug>/', views.service, name='service'),
+    path('shop/avtomasla_optom/', views.avtomasla, name='avtomasla'),
 
 
     # path('login/', views.login, name='login'),

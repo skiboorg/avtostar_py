@@ -1,0 +1,384 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+   <div class="ts-slider-area owl-carousel">
+      <div class="slider-items slider-overlay" style="background: url('{% static 'images/masla1.jpg' %}')">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-8 col-md-12">
+                  <div style="background-color: #212529b5;
+    padding: 20px;" class="slider-content">
+                     <h1>
+                        <small>МЫ ПРЕДЛАГАЕМ</small>
+                        АВТОМОБИЛЬНЫЕ МАСЛА  <span>И АВТОХИМИЮ</span>
+                     </h1>
+                     <p class="slider-desc">ОПТОМ В ПЯТИГОРСКЕ</p>
+
+                  </div> <!-- Slider Content End -->
+               </div> <!-- Col End -->
+            </div> <!-- Row ENd -->
+         </div> <!-- Container End -->
+      </div> <!-- 1st Slider -->
+
+   </div> <!-- Slider Area End -->
+
+
+   <section id="ts-intro" class="ts-intro pb-0">
+      <div class="container">
+         <div class="row no-gutters">
+            <div class="col-lg-4 col-md-12">
+               <div class="ts-intro-wrapper">
+                  <div class="intro-content">
+                     <h2>Контакты</h2>
+                     <ul>
+                        <li>
+                           <span>Руководитель отдела оптовых продаж</span>
+                           <p class="intro-info">8 (962) 411-01-11</p>
+                        </li>
+                        <li>
+                           <span>Менеджер Андрей</span>
+                           <p class="intro-info">8 (905) 447-89-75</p>
+                        </li>
+                        <li>
+                           <span>Менеджер Влад</span>
+                           <p class="intro-info">8 (905) 447-89-76</p>
+                        </li>
+                     </ul><!-- Ul List -->
+                  </div><!-- Intro Content -->
+                  <i class="icon icon-phone3"></i>
+               </div><!-- Intro Wrapper -->
+            </div><!-- Col End -->
+            <div class="col-lg-4 col-md-12">
+               <div class="ts-intro-wrapper highlight">
+                  <div class="intro-content">
+                     <h2>Запрос на оптовые цены</h2>
+                     <div class="intro-form">
+                        <!-- START copy section: General Contact Form -->
+                        <form class="contactMe small text-center" action="contactme/contact-form.php" method="POST" enctype="multipart/form-data">
+                              <div class="form-row">
+                                 <div class="col-md-12">
+                                    <input type="text" name="name" data-displayname="Name" class="field" placeholder="Ваше имя" required>
+                                 </div>
+                              </div>
+                              <div class="form-row form-row-second">
+                                 <div class="col-md-12">
+                                   <input type="tel" id="phone_input" name="phone" data-displayname="Phone" class="field" placeholder="Ваш телефон" required>
+                                 </div>
+
+                              </div>
+                              <!-- Google reCAPTCHA -->
+                              <!-- Create a site key for your website: https://www.google.com/recaptcha -->
+                              <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
+                              <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
+                              <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+                              <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
+                              <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+
+                              <div class="msg "></div>
+
+                              <button class="btn btn-bordered" type="submit" data-sending="Sending...">ЖДУ ЗВОНКА</button>
+                        </form>
+                        <!-- END copy section: General Contact Form -->
+                     </div><!-- Intro Form -->
+                  </div><!-- Intro Content -->
+                  <i class="icon-percentage"></i>
+               </div><!-- Intro Wrapper -->
+            </div><!-- COl End -->
+            <div class="col-lg-4 col-md-12">
+               <div class="ts-intro-wrapper intro-carousel">
+                  <div class="intro-content-carousel owl-carousel">
+                     <div class="intro-content">
+                        <h2>Предложение месяца</h2>
+                        <div class="intro-carousel">
+                           <p>Незамерзайка фирмы "ХХХ" по цене ХХХ руб.</p>
+                        </div>
+                     </div><!-- Intro Content End -->
+
+                  </div><!-- Intro Carousel end -->
+                  <i class="icon-solution"></i>
+               </div><!-- Intro Wrapper End -->
+            </div><!-- Col End -->
+         </div>
+         <!-- Main Row End -->
+      </div>
+      <!-- Container End -->
+   </section>
+   <!-- Intro End -->
+
+   <section id="ts-feature" class="ts-feature pb-0">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h2 class="section-title">
+                  Почему мы?
+               </h2>
+            </div><!-- Col end -->
+         </div><!-- Row End -->
+         <div class="row">
+            <div class="col-lg-8 col-md-12">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="ts-feature-wrapper">
+                        <div class="feature-single">
+                           <span class="feature-icon">
+                              <i class="icon-mechanic"></i>
+                           </span><!-- feature icon -->
+                           <div class="feature-content">
+                              <h3>ЛИЧНЫЙ МЕНЕДЖЕР</h3>
+                              <p>Всегда насвязи, всегда готов помочь</p>
+                           </div><!-- feature content end -->
+                        </div><!-- feature single end -->
+                     </div><!-- feature wrapper end -->
+                  </div><!-- Col end -->
+                  <div class="col-md-6">
+                     <div class="ts-feature-wrapper">
+                        <div class="feature-single">
+                           <span class="feature-icon">
+                              <i class="icon-price"></i>
+                           </span><!-- feature icon -->
+                           <div class="feature-content">
+                              <h3>ЛУЧШИЕ ЦЕНЫ</h3>
+                              <p>Мы работаем напрямую от производителя.</p>
+                           </div><!-- feature content end -->
+                        </div><!-- feature single end -->
+                     </div><!-- feature wrapper end -->
+                  </div><!-- Col end -->
+               </div><!-- Content Row End -->
+               <div class="gap-35"></div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="ts-feature-wrapper">
+                        <div class="feature-single">
+                           <span class="feature-icon">
+                              <i class="icon-client"></i>
+                           </span><!-- feature icon -->
+                           <div class="feature-content">
+                              <h3>НАМ ДОВЕРЯЮТ</h3>
+                              <p>Начните работать с нами и поймете почему.</p>
+                           </div><!-- feature content end -->
+                        </div><!-- feature single end -->
+                     </div><!-- feature wrapper end -->
+                  </div><!-- Col end -->
+                  <div class="col-md-6">
+                     <div class="ts-feature-wrapper">
+                        <div class="feature-single">
+                           <span class="feature-icon">
+                              <i class="icon-fast"></i>
+                           </span><!-- feature icon -->
+                           <div class="feature-content">
+                              <h3>ОПЕРАТИВНАЯ ОТГРУЗКА</h3>
+                              <p>Мы ценим время наших клиентов</p>
+                           </div><!-- feature content end -->
+                        </div><!-- feature single end -->
+                     </div><!-- feature wrapper end -->
+                  </div><!-- Col end -->
+               </div><!-- Content Row End -->
+            </div><!-- Col End -->
+         </div><!-- Row End -->
+      </div><!-- Container end -->
+      <div class="feature-img">
+         <img class="img-fluid" src="{% static '/images/masla2.png' %}" alt="">
+      </div><!-- feature Img -->
+   </section><!-- Ts feature end -->
+
+   <section id="ts-about" class="ts-about">
+      <div class="container-fluid no-padding">
+         <div class="row">
+            <div class="col-lg-7 col-md-12">
+               <div class="box-skew-hidden-left">
+                  <div class="box-skew-left">
+                       <div class="box-skew-img">
+                           <img class="img-fluid" src="{% static 'images/masla2.jpg' %}" alt="">
+                       </div>
+                     <div class="box-content-wrapper">
+                        <h2 class="column-title">
+
+                             Мы предлагаем сотрудничество
+                        </h2>
+
+                     </div> <!-- Content wrapper end -->
+                  </div> <!-- Content left ebd -->
+               </div>
+            </div> <!-- Col End -->
+            <div class="col-lg-5 col-md-12">
+               <div class="box-skew-right bg-red">
+                  <div class="box-content-wrapper">
+
+                     <div class="panel-group" id="accordion3">
+          <div class="panel panel-minimal">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" class="collapsed" aria-expanded="false">Автотранспортным предприятиям</a>
+              </h4>
+            </div>
+            <div id="collapseOne3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+              <div class="panel-body">
+                <p>
+                </p><ul>
+                  <li>Приемлемые цены;</li>
+                  <li>Проекты по решению проблем связанных со снижением эксплуатационных затрат;</li>
+                  <li>Консультации по применяемости моторных , трансмиссионных масел, а также смазок, антифризов и автохимии;</li>
+                  <li>Максимально возможное обеспечение специфических потребностей в смазочных материалах;</li>
+                  <li>Практически стопроцентное выполнение заявок;</li>
+                  <li>Доставка заказанного товара в течении суток или в заранее оговоренный срок;</li>
+                  <li>Персонального менеджера;</li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-minimal">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3" class="collapsed" aria-expanded="false">Автомагазинам</a>
+              </h4>
+            </div>
+            <div id="collapseTwo3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+              <div class="panel-body">
+                <p>
+                </p><ul>
+                  <li>Заманчивые цены</li>
+                  <li>Максимально возможное обеспечение ассортимента автомасел, антифризов, автохимии и автопринадлежностей</li>
+                  <li>Практически стопроцентное выполнение заявок</li>
+                  <li>Доставка заказанного товара в течении суток или в заранее оговоренный срок</li>
+                  <li>Персонального менеджера</li>
+                  <li>Обеспечение рекламной продукцией</li>
+                  <li>Для вновь открывающихся автомагазинов оказываем помощь в подборе ассортимента</li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-minimal">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" class="collapsed" aria-expanded="false">Станциям технического обслуживания</a>
+              </h4>
+            </div>
+            <div id="collapseThree3" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>
+                </p><ul>
+                  <li>Приемлемые цены</li>
+                  <li>Максимально возможное обеспечение ассортимента автомасел, антифризов, автохимии</li>
+                  <li>Практически стопроцентное выполнение заявок</li>
+                  <li>Доставка заказанного товара в течении суток или в заранее оговоренный срок</li>
+                  <li>Персонального менеджера</li>
+                  <li>Обеспечение рекламной продукцией</li>
+                  <li>Помощь в максимальном уменьшении внутренней себестоимости технического обслуживания</li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-minimal">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse4" class="collapsed" aria-expanded="false">Автозаправочным комплексам</a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>
+                </p><ul>
+                  <li>Приемлемые цены</li>
+                  <li>Максимально возможное обеспечение ассортимента&nbsp; автомасел, антифризов, автохимии</li>
+                  <li>Практически стопроцентное выполнение заявок</li>
+                  <li>Доставка заказанного товара&nbsp; в течении суток или в заранее оговоренный срок.</li>
+                  <li>Персонального менеджера</li>
+                  <li>Обеспечение рекламной продукцией</li>
+                  <li>Помощь в подборе оптимального ассортимента автомасел, антифризов, автохимии и автопринадлежностей</li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-minimal">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse5" class="collapsed" aria-expanded="false">Оптовым компаниям</a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>
+                </p><ul>
+                  <li>Цены от производителя</li>
+                  <li>Широкий ассортимент продукции</li>
+                  <li>Практически стопроцентное выполнение заявок</li>
+                  <li>Высокое качество погрузочно-разгрузочных работ</li>
+                  <li>Персонального менеджера</li>
+                  <li>Доставка заказа до транспортной компании</li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-minimal">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse6" class="collapsed" aria-expanded="false">Физическим лицам</a>
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>
+                  По вопросам приобретения продукции, оставьте заявку на сайте. Наши менеджеры Вам перезвонят.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+                  </div> <!-- Content wrapper end -->
+                  <img src="images/about/about_img.png" alt="">
+               </div> <!-- Content Right End -->
+            </div> <!-- Col end -->
+         </div> <!-- Row End -->
+      </div> <!-- Container Fluid -->
+   </section> <!-- About End -->
+
+
+
+   <section style="padding: 0 0 !important;">
+      <div class="container">
+       <div class="entry-content"> <h2 class="section-title">Купить автомасла оптом и автохимию оптом</h2><p class="untouchable">АО ПФ "АВТОСТАР" предлагает автомасла (автомобильные моторные масла оптом, масла трансмиссионные, масла гидравлические, смазки) охлаждающие жидкости (тосол, антифриз), автохимия, автоаксессуары, автокосметика ABRO, BODY, Turtle Wax и многое другое оптом в Пятигорске и КМВ.</p>
+          <p class="untouchable">Мы много лет продаем автомобильные масла, автохимию и автокосметику и можем компетентно проконсультировать по всем вопросам касательно ассортимента и технических характеристик. Но, как показывает практика, те, кто покупают автохимию и масла оптом, разбираются в товаре не хуже нас.</p>
+          <p class="untouchable"><b>Наше преимущество - цены</b></p>
+          <p>Цены интересуют оптовиков в первую очередь. Важно и качество приобретаемого товара, от которого в итоге зависит ваша репутация как продавца (и наша в том числе). Поэтому предлагая купить автомасла, тосол, антифриз, автохимию и автокосметику оптом, мы сделали ставку на высокое качество продукции, разработав гибкую ценовую политику, чтобы с нами было приятно работать.</p>
+          <br>
+           <h2 class="section-title">Почему на автомасла цены у нас ниже, чем у многих конкурентов:</h2>
+          <ul class="untouchable" style="text-align: justify;">
+            <li>работаем по прямым договорам с ведущими производителями и дистрибьюторами автомасел и автохимии, что позволяет значительно сократить финансовые издержки, закладываемые в стоимость товара;</li>
+            <li>закупаем масла оптом (цены еще и поэтому у нас приятно низкие). Это же правило распространяется на автоаксессуары, косметику, химию;</li>
+            <li>большие площади складских помещений позволяют поддерживать постоянный запас и обеспечивать 95%-ное наличие ассортимента на момент заказа. Готовность отгрузить любую партию товара экономит ваше время (и деньги, соответственно).</li>
+          </ul>
+          <p class="untouchable" style="text-align: justify;">Именно поэтому (и потому, что мы  разделяем все проблемы автомобилистов) химию, косметику и моторное масло оптом купить у нас можно действительно с ощутимой выгодой, дешевле, чем у многих известных крупных поставщиков.</p>
+         </div>
+      </div><!-- Container end -->
+   </section> <!-- Service BG end -->
+
+
+
+   <section id="ts-pertner" class="ts-pertner ">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="partner-carousel owl-carousel">
+
+                   {% for f in files %}
+                  <figure class="partner-item partner-logo">
+                      <a href="#"><img style="height: 45px " class="img-fluid" src="/{{ f }}" alt=""></a>
+                  </figure> <!-- Figure end -->
+                {% endfor %}
+               </div> <!-- Partner carousel end -->
+            </div> <!-- Col end -->
+         </div> <!-- Row end -->
+      </div> <!-- Container end -->
+   </section> <!-- Partner end -->
+
+{% endblock %}
