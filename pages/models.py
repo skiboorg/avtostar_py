@@ -59,4 +59,5 @@ class Banner(models.Model):
     small_text = models.CharField('Маленький текст', max_length=255, blank=True, null=True)
     big_text = models.CharField('Большой текст', max_length=255, blank=False, null=True)
     description = models.CharField('Описание', max_length=255, blank=True, null=True)
+    url = models.CharField('Ссылка', max_length=255, blank=True, null=True,default='')
     is_active = models.BooleanField('Активен?', default=True)

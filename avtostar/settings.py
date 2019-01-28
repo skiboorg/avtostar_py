@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-
+import  settings
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,7 +26,11 @@ SECRET_KEY = '52f6yuwfy9!g4ct43n7-@04ndqt1j$l%mw@d(6f!rlzdu$^5+1'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+EMAIL_HOST = settings.SERVER
+EMAIL_HOST_USER = settings.USER
+EMAIL_HOST_PASSWORD = settings.API
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 

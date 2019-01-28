@@ -1,0 +1,48 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+   <div class="banner-area bg-overlay" id="banner-area" style="background-image:url({% static '/images/service_all.jpg' %});    background-size: cover;">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="banner-heading">
+                  <h1 class="banner-title">НАШИ УСЛУГИ</h1>
+                  <ol class="breadcrumb">
+                     <li><a href="/">Главная</a></li>
+                     <li class="crumb_active"><a href="#">Сервисы</a></li>
+
+                  </ol><!-- Breadcumb End -->
+               </div><!-- Banner Heading end -->
+            </div><!-- Col end-->
+         </div><!-- Row end-->
+      </div><!-- Container end-->
+   </div><!-- Banner area end-->
+
+    <div style="margin-top: 80px;" class="container">
+
+
+
+         <div class="row">
+             {% for service in all_services %}
+            <div class="col-lg-4 col-md-12">
+               <div style="margin-bottom: 30px;" class="ts-service-wrapper">
+                     <span class="service-img">
+                        <img class="img-fluid" src="{{ service.image.url }}" alt="">
+                     </span> <!-- Service Img end -->
+                     <div class="service-content">
+                        <div class="service-icon">
+                           <i class="{{ service.icon }}"></i>
+                        </div> <!-- Service icon end -->
+                        <h3><a href="{% url 'service' service.name_slug %}">{{ service.name }}</a></h3>
+                        <p>{{ service.short_description }}</p>
+                        <a href="{% url 'service' service.name_slug %}" class="readmore">Подробнее<i class="fa fa-angle-double-right"></i></a>
+                     </div> <!-- Service content end -->
+                  </div> <!-- Service wrapper end -->
+            </div> <!-- Col end -->
+          {% endfor %}
+         </div><!-- Row end -->
+
+		</div>
+{% endblock %}

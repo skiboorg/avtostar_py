@@ -1,0 +1,148 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+<section id="main-container" class="main-container ts-contact-us">
+      <div class="container">
+         <div class="row no-gutters">
+            <div class="col-lg-8 col-md-12">
+               <div class="mapouter">
+                  <div class="gmap_canvas">
+                <iframe height="381" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%B0%D0%B2%D1%82%D0%BE%D1%81%D1%82%D0%B0%D1%80&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+
+                  </div>
+               </div>
+               <!-- Map End -->
+            </div>
+            <!-- Col end -->
+            <div class="col-lg-4 col-md-12">
+               <div class="contact-details">
+                  <h2 class="column-title no-border text-white">
+                     Производственная фирма "Автостар"
+                  </h2>
+                  <div class="contact-info-item">
+                     <h3 class="column-title no-border text-white">
+                        357532, Ставропольский край, г. Пятигорск, Бештаугорское шоссе 16
+                     </h3>
+
+                  </div>
+                  <div class="contact-info-item">
+                     <h3 class="column-title no-border text-white">
+                        Тел/Факс : +7(8793) 32-12-21
+                     </h3>
+
+                  </div>
+                  <div class="contact-info-item">
+                     <h3 class="column-title no-border text-white">
+                         E-Mail : info@avtostar-kmv.ru</h3>
+
+
+                  </div>
+               </div>
+               <!-- Contact details end -->
+            </div>
+            <!-- Col End -->
+         </div>
+         <!-- row end -->
+         <div class="gap-75"></div>
+           <img class="img-fluid" src="{% static 'images/contact.jpg' %}">
+            <div class="gap-75"></div>
+        <div class="row">
+
+            <div class="col-lg-6">
+               <h2 class="section-title">
+                  Оставить отыв
+               </h2>
+
+               <div id="contact-form" class="form-container contact-us" data-eqcss-0-0-parent="" data-eqcss-1-0-parent="">
+                  <!-- START copy section: Hotel Contact Form -->
+                  <form class="contactMe" action="" method="POST" enctype="multipart/form-data" data-eqcss-0-0="" data-eqcss-1-0="">
+                      {% csrf_token %}
+                     <section>
+                        <div class="form-row">
+                           <div class="col-lg-6">
+                              <input style="width: 100%" type="text" name="name" data-displayname="Name" class="field" placeholder="Ф.И.О." required="">
+                           </div>
+                           <div class="col-md-6">
+                              <select style="width: 100%; height: 50px;" required="required"  name="service" class="field select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                 <option disabled selected value>Выберите обслуживание</option>
+                                 <option value="Химчистка-полировка">Химчистка-полировка</option>
+                                 <option value="Техническое обслуживание">Техническое обслуживание</option>
+                                 <option value="Кузовные работы">Кузовные работы</option>
+                                  <option value="Малярные работы">Малярные работы</option>
+                                   <option value="Установка доп.оборудования">Установка доп.оборудования</option>
+                                  <option value="Электрика">Электрика</option>
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 355px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-service-b4-container"><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                           </div>
+                        </div>
+ <div class="form-row">
+      <div class="col-lg-6">
+                                 <input style="width: 100%" type="tel" id="phone_input" name="phone" data-displayname="Phone" class="field" placeholder="Ваш телефон" >
+                              </div>
+        <div class="col-md-6">
+                              <select style="width: 100%; height: 50px;" required="required" name="rating" class="field select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                 <option disabled selected value>Оцените обслуживание</option>
+                                 <option value="5">5</option>
+                                 <option value="4">4</option>
+                                 <option value="3">3</option>
+                                  <option value="2">2</option>
+                                   <option value="1">1</option>
+
+                              </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 355px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-service-b4-container"><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                           </div>
+ </div>
+                        <div class="form-row">
+                           <div class="col-md-12">
+                              <textarea style="width: 100%" name="message" data-displayname="Message" class="field" placeholder="Сообщение" required=""></textarea>
+                           </div>
+                        </div>
+                             <div class="form-group">
+                      <label class="fancy-checkbox">
+                        <input style="height: 16px;" type="checkbox" required="required">
+                        <span style="font-size: 16px;
+                            font-weight: bold;">Я даю свое согласие на хранение и обработку моих персональных данных.</span>
+                      </label>
+                    </div>
+
+                        <!-- Google reCAPTCHA -->
+                        <!-- Create a site key for your website: https://www.google.com/recaptcha -->
+                        <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
+                        <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
+                        <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+                        <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
+                        <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+
+                        <div class="msg"></div>
+
+                        <button class="btn btn-primary" type="submit" data-sending="Sending..." data-text="Send Message">Отправить</button>
+                     </section>
+                     <!-- Ection end -->
+                  </form>
+                   {% if send %}
+                             <span style="color: #FF0000;
+    padding: 19px;
+    border: 2px #FF0000 dotted;
+    margin-bottom: 10px;display: table;">Запрос отправлен. Спасибо!</span>
+                         {% endif %}
+                  <!-- END copy section:Service Contact Form -->
+               </div>
+               <!-- Contact form end -->
+            </div>
+            <div class="col-lg-6">
+               <h2 class="section-title">
+                 Вакансии
+               </h2>
+            <ul >
+                <li>Менеджер в отдел продаж запчастей</li>
+                <li>Контроллер-охранник на автостоянку</li>
+            </ul>
+              <p><strong>По всем интересующим Вас вопросам обращаться по телефону<br> +7 (8793) 32-12-21</strong></p>
+               <!-- Contact form end -->
+            </div>
+         </div>
+
+      </div>
+      <!-- Container end -->
+   </section>
+
+{% endblock %}

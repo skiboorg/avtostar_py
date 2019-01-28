@@ -58,7 +58,15 @@
                      <h2>Запрос на оптовые цены</h2>
                      <div class="intro-form">
                         <!-- START copy section: General Contact Form -->
-                        <form class="contactMe small text-center" action="contactme/contact-form.php" method="POST" enctype="multipart/form-data">
+                         {% if send %}
+                             <span style="color: #fff;
+    margin: 0 auto;
+    display: table;
+    padding: 19px;
+    border: 2px dotted;
+    margin-bottom: 10px;">Запрос отправлен. Спасибо!</span>
+                         {% endif %}
+                        <form class="contactMe small text-center" action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
                               <div class="form-row">
                                  <div class="col-md-12">
                                     <input type="text" name="name" data-displayname="Name" class="field" placeholder="Ваше имя" required>
@@ -89,17 +97,22 @@
                </div><!-- Intro Wrapper -->
             </div><!-- COl End -->
             <div class="col-lg-4 col-md-12">
-               <div class="ts-intro-wrapper intro-carousel">
-                  <div class="intro-content-carousel owl-carousel">
-                     <div class="intro-content">
-                        <h2>Предложение месяца</h2>
-                        <div class="intro-carousel">
-                           <p>Незамерзайка фирмы "ХХХ" по цене ХХХ руб.</p>
-                        </div>
-                     </div><!-- Intro Content End -->
+               <div class="ts-intro-wrapper">
+                  <div class="intro-content">
+                     <h2>График работы</h2>
+                     <ul>
+                        <li>
+                           <span>Понедельник - Пятница</span>
+                           <p class="intro-info">с 8<sup>00</sup> до 17<sup>00</sup></p>
+                        </li>
+                        <li>
+                           <span>Суббота - Воскресенье</span>
+                           <p class="intro-info">ВЫХОДНОЙ</p>
+                        </li>
 
-                  </div><!-- Intro Carousel end -->
-                  <i class="icon-solution"></i>
+                     </ul><!-- Ul List -->
+                  </div><!-- Intro Content -->
+                  <i class="icon icon-list"></i>
                </div><!-- Intro Wrapper End -->
             </div><!-- Col End -->
          </div>
@@ -335,7 +348,7 @@
 
         </div>
                   </div> <!-- Content wrapper end -->
-                  <img src="images/about/about_img.png" alt="">
+{#                  <img src="images/about/about_img.png" alt="">#}
                </div> <!-- Content Right End -->
             </div> <!-- Col end -->
          </div> <!-- Row End -->

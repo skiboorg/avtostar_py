@@ -17,7 +17,9 @@
                <div class="col-lg-8 col-md-12">
                   <div class="slider-content">
                      <h1>
+                         {% if banner.small_text %}
                         <small>{{ banner.small_text }}</small>
+                         {% endif %}
                         {{ banner.big_text }}
                      </h1>
                   {% if banner.description %}
@@ -25,6 +27,9 @@
                    {% endif %}
                       {% if banner.post %}
                         <a href="#" class="btn btn-primary">Подробнее</a>
+                      {% endif %}
+                  {% if banner.url %}
+                        <a href="{{ banner.url }}" class="btn btn-primary">Подробнее</a>
                       {% endif %}
 
                   </div> <!-- Slider Content End -->
@@ -79,7 +84,7 @@
             </div><!-- Col end -->
             <div class="col-md-6">
 
-               <button class="btn btn-primary" >Посмотреть все услуги</button>
+               <button onclick="window.location.href='/service/all'" class="btn btn-primary" >Посмотреть все услуги</button>
             </div><!-- Col end -->
 
 
@@ -177,9 +182,15 @@
                   </div> <!-- Col End -->
                </div> <!-- Row end -->
                <div class="row">
+                   {% if send %}
+                             <span style="color: #FF0000;
+    padding: 19px;
+    border: 2px #FF0000 dotted;
+    margin-bottom: 10px;">Запрос отправлен. Спасибо!</span>
+                         {% endif %}
                   <div id="contact-form" class="form-container col-lg-12">
                      <!-- START copy section: Hotel Contact Form -->
-                     <form class="contactMe ts-main-form" action="" method="POST" >
+                     <form class="contactMe ts-main-form" action="" method="POST" >{% csrf_token %}
 
                            <div class="form-row">
                               <div class="col-lg-4">

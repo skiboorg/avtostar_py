@@ -1,0 +1,296 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+   <div class="ts-slider-area owl-carousel">
+      <div class="slider-items slider-overlay" style="background: url('{% static 'images/dj_banner1.jpg' %}')">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-8 col-md-12">
+                  <div style="background-color: #212529b5;
+    padding: 20px;" class="slider-content">
+                     <h1>
+                        <small>АВТОЗВУК</small>
+                        Магнитолы <span>акустика</span>
+                     </h1>
+                     <p class="slider-desc">Установка и обслуживание</p>
+
+                  </div> <!-- Slider Content End -->
+               </div> <!-- Col End -->
+            </div> <!-- Row ENd -->
+         </div> <!-- Container End -->
+      </div> <!-- 1st Slider -->
+    <div class="slider-items slider-overlay" style="background: url('{% static 'images/dj_banner2.jpg' %}')">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-8 col-md-12">
+                  <div style="background-color: #212529b5;
+    padding: 20px;" class="slider-content">
+                     <h1>
+                        <small>ПРОТИВОУГОННЫЕ КОМПЛЕКСЫ</small>
+                        Механические блокираторы <span>спутниковые поисковые системы</span>
+                     </h1>
+                     <p class="slider-desc"></p>
+
+                  </div> <!-- Slider Content End -->
+               </div> <!-- Col End -->
+            </div> <!-- Row ENd -->
+         </div> <!-- Container End -->
+      </div> <!-- 1st Slider -->
+    <div class="slider-items slider-overlay" style="background: url('{% static 'images/dj_banner3.jpg' %}')">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-8 col-md-12">
+                  <div style="background-color: #212529b5;
+    padding: 20px;" class="slider-content">
+                     <h1>
+                        <small>ШУМОИЗОЛЯЦИЯ АВТОМОБИЛЯ</small>
+                        Комплексная или частичная <span>шумоизоляция салона автомобиля</span>
+                     </h1>
+
+
+                  </div> <!-- Slider Content End -->
+               </div> <!-- Col End -->
+            </div> <!-- Row ENd -->
+         </div> <!-- Container End -->
+      </div> <!-- 1st Slider -->
+
+   </div> <!-- Slider Area End -->
+
+
+   <section id="ts-intro" class="ts-intro pb-0">
+      <div class="container">
+         <div class="row no-gutters">
+            <div class="col-lg-4 col-md-12">
+               <div class="ts-intro-wrapper">
+                  <div class="intro-content">
+                     <h2>Контакты</h2>
+                     <ul>
+                        <li>
+                           <span>Установка оборудования</span>
+                           <p class="intro-info">+7 (961) 464-50-02</p>
+                        </li>
+                        <li>
+                           <span>Продажи, консультация</span>
+                           <p class="intro-info">8 (8793) 32-70-78</p>
+                        </li>
+
+                     </ul><!-- Ul List -->
+                  </div><!-- Intro Content -->
+                  <i class="icon icon-phone3"></i>
+               </div><!-- Intro Wrapper -->
+            </div><!-- Col End -->
+            <div class="col-lg-4 col-md-12">
+               <div class="ts-intro-wrapper highlight">
+                  <div class="intro-content">
+                     <h2>Есть вопросы?</h2>
+                     <div class="intro-form">
+                          {% if send %}
+                             <span style="color: #fff;
+    margin: 0 auto;
+    display: table;
+    padding: 19px;
+    border: 2px dotted;
+    margin-bottom: 10px;">Запрос отправлен. Спасибо!</span>
+                         {% endif %}
+                        <!-- START copy section: General Contact Form -->
+                        <form class="contactMe small text-center" action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                              <div class="form-row">
+                                 <div class="col-md-12">
+                                    <input type="text" name="name" data-displayname="Name" class="field" placeholder="Ваше имя" required>
+                                 </div>
+                              </div>
+                              <div class="form-row form-row-second">
+                                 <div class="col-md-12">
+                                   <input type="tel" id="phone_input" name="phone" data-displayname="Phone" class="field" placeholder="Ваш телефон" required>
+                                 </div>
+
+                              </div>
+
+                                <div class="form-group">
+                      <label class="fancy-checkbox">
+                        <input style="height: 16px;" type="checkbox" required="required">
+                        <span style="    font-size: 14px; color: #fff;">Я согласен на обработку моих персональных данных.</span>
+                      </label>
+                    </div>
+                              <!-- Google reCAPTCHA -->
+                              <!-- Create a site key for your website: https://www.google.com/recaptcha -->
+                              <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
+                              <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
+                              <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+                              <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
+                              <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+
+                              <div class="msg "></div>
+
+                              <button class="btn btn-bordered" type="submit" data-sending="Sending...">ЖДУ ЗВОНКА</button>
+                        </form>
+                        <!-- END copy section: General Contact Form -->
+                     </div><!-- Intro Form -->
+                  </div><!-- Intro Content -->
+                  <i class="icon-percentage"></i>
+               </div><!-- Intro Wrapper -->
+            </div><!-- COl End -->
+            <div class="col-lg-4 col-md-12">
+              <div class="ts-intro-wrapper">
+                  <div class="intro-content">
+                     <h2>График работы</h2>
+                     <ul>
+                        <li>
+                           <span>Понедельник - Суббота</span>
+                           <p class="intro-info">с 8<sup>00</sup> до 18<sup>00</sup></p>
+                        </li>
+                        <li>
+                           <span>Воскресенье&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                           <p class="intro-info">с 8<sup>00</sup> до 16<sup>00</sup></p>
+                        </li>
+
+                     </ul><!-- Ul List -->
+                  </div><!-- Intro Content -->
+                  <i class="icon icon-list"></i>
+               </div><!-- Intro Wrapper End -->
+            </div><!-- Col End -->
+         </div>
+         <!-- Main Row End -->
+      </div>
+      <!-- Container End -->
+   </section>
+   <!-- Intro End -->
+
+  <section style="padding: 30px 0 !important;">
+       <div class="container">
+       <div class="entry-content">
+       <div class="content">
+
+
+            <p class="pwin">
+              Наш магазин автоэлетроники - это ваш способ быстро найти любую продукцию, которая Вас интересует.
+              В нашем ассортименте есть огромный выбор автомагнитол, усилителей, акустики, сабвуферов, GPS — навигаторов, парктроников, автосигнализаций, а также
+              различного дополнительного электрооборудования для авто.
+              У нас не только низкие цены, но и возможность приобрести товар со скидками для Вашего автомобиля практически любой марки!
+            </p>
+            <p class="pwin">
+              Кроме продажи,мы занимается консультированием и
+              установкой аудио, видео, охранных систем: автомагнитол, усилителей, акустики, сабвуферов, GPS —
+              навигаторов, парктроников и автосигнализаций на отечественные, так и на автомобили иностранного происхождения.
+            </p>
+            <p class="pwin">
+              В нашем каталоге находится более 1000 товарных позиций для того, чтобы автолюбители с разными возможностями и
+              желаниями смогли найти для себя покупку, которая облегчит ему поездку или скрасит время, проведенное за рулем, или поможет
+              улучшить комфорт во время движения авто или остановках в пробках. К тому же наш магазин – это возможность не только сделать
+              приятную покупку для себя, но и сделать прекрасный подарок для друзей или близких.
+              Вам достаточно знать марку автомобиля и желание сделать приятный сюрприз, обо всем остальном позаботятся наши специалисты!
+            </p>
+            <p class="pwin">
+              Мы работаем напрямую с производителями, что позволяет нам достигать самых низких цен.
+
+            </p>
+
+
+      </div>
+       </div>
+      </div><!-- Container end -->
+   </section> <!-- Service BG end -->
+
+    <section style="padding: 0px 0 !important;" id="ts-newsletter" class="ts-newsletter">
+      <div class="container-fluid no-padding">
+         <div class="row">
+            <div class="col-md-6 align-self-center">
+               <div class="box-skew-area-left bg-red">
+                  <div class="box-skew-sm-left">
+                     <h2 class="column-title text-white">
+                        Сертифицированный установочный центр
+                     </h2>
+
+                  </div> <!-- Newsletter Content end -->
+               </div> <!-- Newsletter Left end -->
+            </div> <!-- Col End -->
+            <div class="col-md-6">
+               <div class="box-skew-area-right">
+                  <div class="box-skew-sm-right">
+                        <img src="{% static 'images/dj_block1.jpg' %}" alt="">
+                     <h2 class="column-title text-white no-border">
+
+                        Сохраняем гарантию<br> на новые автомобили
+                     </h2>
+
+                  </div> <!-- Newsletter content end -->
+               </div> <!-- Newsletter right end -->
+            </div> <!-- Col end -->
+         </div> <!-- Row End -->
+      </div> <!-- Container fluid end -->
+   </section> <!-- Newsletter End -->
+
+
+
+   <section style="padding: 30px 0 !important;">
+       <div class="container">
+       <div class="entry-content">
+       <div class="content">
+
+          <h2 class="section-title">Мы предлагаем</h2>
+
+            <ul>
+              <li>В ассортименте нашей продукции находятся технические, инженерные, электронные разработки от ведущих производителей,
+                таких как RedPower, Navipilot, Portal, Sky, Intro, Radila, Car4G, Road Rover, Trinity, Motevo, Pioneer,
+                Alpine, Escort, Beltronics, Street Storm и многих других. Наша компания – прямой дилер  от этих компаний, долгие годы сотрудничества
+                с ними показали множество достоинств для российского потребителя, что помогло нам собрать
+                огромную клиентскую базу, которая постоянно пополняется новыми покупателями, а для самих потребителей мы стали тем
+                способом, где всегда можно купить качественную продукцию по самой низкой цене.</li>
+
+
+              <li>
+              Помимо возможности купить здесь необходимую продукцию для авто, Вы можете обратиться в консультационный центр нашей компании,
+                чтобы получить от наших специалистов профессиональную консультацию по любому интересующему Вас вопросу.
+                Специалисты нашего магазина проинформируют Вас о любом товаре и дадут исчерпывающие ответы на все Ваши вопросы,
+                чтобы Вы нашли то, что искали и Ваш выбор был верным.</li>
+
+              <li>
+              Мы предлагаем Вам товар не просто от ведущих производителей, а гарантированно качественный товар,
+                который идет прямыми поставками с заводов брендов, поэтому подлинность каждой единицы каталога мы гарантируем Вам лично.
+                К тому же, ассортимент магазина автоэлектроники в пятигорске пополняется постоянно, поэтому если Вы не нашли нужную Вам продукцию от какого либо бренда,
+                Вы можете обратится к нашими менеджерами, которые либо посоветуют Вам альтернативу товара, либо сделают индивидуальный заказ и в
+                скором времени Вы получите по самой низкой цене то, что искали.</li>
+
+              <li>
+              Чтобы осуществить покупку в нашем магазине, мы позаботились о том, чтобы Вы, став нашим клиентом,
+                смогли оплатить заказ любым удобным для Вас способом. Вы можете сделать оплату наличным.
+                Безналичным платежом и банковским переводом.</li>
+            </ul>
+          <p class="pwin">
+            Консультирование, продажа и инсталляция продукта – таков стиль работы компании «АвтоDJ», а это значит, что обратившись к нам, вы получите:
+          </p>
+          <ul>
+            <li>квалифицированную помощь наших специалистов при выборе аудио или видео – техники, а также мультимедийных и навигационных систем, радар-детекторов, видео-регистраторов</li>
+            <li>подбор продукции в любой ценовой категории ( от недорогих систем до систем премиум — класса hi-end)</li>
+            <li>подготовку и инсталляцию продукта квалифицированными специалистами</li>
+            <li>максимум удовольствия от комфорта и безопасности вашего автомобиля</li>
+          </ul>
+      </div>
+       </div>
+      </div><!-- Container end -->
+   </section> <!-- Service BG end -->
+
+
+
+   <section id="ts-pertner" class="ts-pertner ">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="partner-carousel owl-carousel">
+
+                   {% for f in files %}
+                  <figure class="partner-item partner-logo">
+                      <a href="#"><img style="height: 45px " class="img-fluid" src="/{{ f }}" alt=""></a>
+                  </figure> <!-- Figure end -->
+                {% endfor %}
+               </div> <!-- Partner carousel end -->
+            </div> <!-- Col end -->
+         </div> <!-- Row end -->
+      </div> <!-- Container end -->
+   </section> <!-- Partner end -->
+
+{% endblock %}

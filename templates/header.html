@@ -92,6 +92,8 @@
                         <ul class="dropdown-menu ts-dropdown-menu">
 
                            <li><a href="{% url 'avtomasla' %}">Оптовые поставки масел и автохимии</a></li>
+                              <li><a href="{% url 'ladadetal' %}">магазин автозапчастей ВАЗ</a></li>
+                             <li><a href="{% url 'avtodj' %}">МАГАЗИН АВТОЭЛЕКТРОНИКИ АВТОDJ</a></li>
 
                         </ul><!-- End of Dropdown menu -->
                      </li><!-- End Dropdown -->
@@ -99,7 +101,7 @@
 
 
                      <li class="nav-item dropdown">
-                        <a class="nav-link" href="contact.html" >
+                        <a class="nav-link {{ active_contact }}" href="{% url 'contact' %}" >
                         КОНТАКТЫ
                         </a>
                      </li> <!-- End Dropdown -->

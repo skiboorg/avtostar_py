@@ -22,6 +22,9 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('service/<name_slug>/', views.service, name='service'),
     path('shop/avtomasla_optom/', views.avtomasla, name='avtomasla'),
+    path('сontact/', views.contact, name='contact'),
+    path('ladadetal/', views.ladadetal, name='ladadetal'),
+    path('avtodj/', views.avtodj, name='avtodj')
 
 
     # path('login/', views.login, name='login'),
