@@ -51,6 +51,7 @@ def ladadetal(request):
     title = 'КУПИТЬ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ ЛАДА ПО ВЫГОДНЫМ ЦЕНАМ В ПЯТИГОРСКЕ И КМВ. КАТАЛОГ ЗАПЧАСТЕЙ ВАЗ ВСЕХ МОДЕЛЕЙ В НАЛИЧИИ И ПОД ЗАКАЗ'
     return render(request, 'pages/lada.html', locals())
 
+
 def avtodj(request):
     if request.POST:
         # test_txt = 'тестттт'
