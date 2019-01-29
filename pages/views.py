@@ -4,6 +4,7 @@ import glob
 import os
 from avtostar.settings import STATIC_URL
 from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 def index(request):
     if request.POST:
@@ -52,8 +53,13 @@ def ladadetal(request):
 
 def avtodj(request):
     if request.POST:
+        # test_txt = 'тестттт'
+        # msg_plain = render_to_string('email.txt', {'text': test_txt})
+        # msg_html = render_to_string('test_email.html', {'text': test_txt})
         send_mail('Запрос на обратный звонок', 'Посетитель {} просит перезвонить ему на номер {} '.format(
             request.POST.get('name'),request.POST.get('phone')), 'noreply@yandex.ru', ['marketing@avtostar-kmv.ru'], fail_silently=False)
+        # send_mail('Запрос на обратный звонок',None, 'noreply@yandex.ru', ['marketing@avtostar-kmv.ru'],
+        #           fail_silently=False, html_message=msg_html)
         send = True
     directory = 'static/images/djbrands/*'
     files = glob.glob(directory)
