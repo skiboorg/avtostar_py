@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from pages.models import Service , Banner, Image
 import glob
-import os
-from avtostar.settings import STATIC_URL
+
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
@@ -12,7 +11,7 @@ def index(request):
             request.POST.get('name'),request.POST.get('phone')), 'admin@avtostar-kmv.ru', ['marketing@avtostar-kmv.ru'], fail_silently=False)
         send = True
     active_home = 'active'
-    title = 'ТЕХНИЧЕСКИЙ ЦЕНТР '
+    title = 'РЕМОНТ АВТОМОБИЛЕЙ ВСЕХ МАРОК'
     banners = Banner.objects.filter(is_active=True).order_by('order')
     services = Service.objects.filter(show_at_home=True)
     images = Image.objects.all()
@@ -32,7 +31,7 @@ def service(request,name_slug):
         return render(request, 'pages/service.html', locals())
 
 
-def contact(request):
+def about(request):
     if request.POST:
         send_mail('Новый отзыв', 'Посетитель {} по поводу сервиса {} поставил оценку {}. Тескт сообщения: {} . Телефон: {} '.format(
             request.POST.get('name'),
@@ -48,7 +47,7 @@ def contact(request):
 def ladadetal(request):
 
     active_shop = 'active'
-    title = 'КУПИТЬ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ ЛАДА ПО ВЫГОДНЫМ ЦЕНАМ В ПЯТИГОРСКЕ И КМВ. КАТАЛОГ ЗАПЧАСТЕЙ ВАЗ ВСЕХ МОДЕЛЕЙ В НАЛИЧИИ И ПОД ЗАКАЗ'
+    title = 'КУПИТЬ ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ ЛАДА'
     return render(request, 'pages/lada.html', locals())
 
 
@@ -58,7 +57,7 @@ def avtodj(request):
         # msg_plain = render_to_string('email.txt', {'text': test_txt})
         # msg_html = render_to_string('test_email.html', {'text': test_txt})
         send_mail('Запрос на обратный звонок', 'Посетитель {} просит перезвонить ему на номер {} '.format(
-            request.POST.get('name'),request.POST.get('phone')), 'noreply@yandex.ru', ['marketing@avtostar-kmv.ru'], fail_silently=False)
+            request.POST.get('name'), request.POST.get('phone')), 'admin@avtostar-kmv.ru', ['marketing@avtostar-kmv.ru'], fail_silently=False)
         # send_mail('Запрос на обратный звонок',None, 'noreply@yandex.ru', ['marketing@avtostar-kmv.ru'],
         #           fail_silently=False, html_message=msg_html)
         send = True
