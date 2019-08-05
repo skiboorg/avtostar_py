@@ -1418,6 +1418,7 @@ blockquote p cite {
 .top-contact-info a.btn-primary {
   position: relative;
   top: -15px;
+  font-size: 25px;
 }
 .top-contact-info .btn {
   height: 40px;
@@ -4437,4 +4438,45 @@ blockquote p cite {
 .loader {
   color: #fff;
   font-size: 80px;
+}
+
+.big-red {
+  color: red;
+  display: inline-block;
+  font-weight: bold !important;
+  font-size: 70px;
+  vertical-align: middle;
+}
+
+.text-white small {
+  display: inline-block;
+}
+
+.bg-orange {
+  background-color: #FFA500;
+}
+
+.yellow-bar-social-icon i {
+    color: #fff;
+}
+
+.yellow-bar-social-icon li a {
+    display: block;
+    padding: 0 8px;
+}
+.yellow-bar-social-icon li a i:hover {
+    color: red;
+}
+.yellow-bar-social-icon li a:hover {
+    transform: scale(1.15);
+}
+
+.yellow-bar-social-icon li {
+    display: inline-block;
+}
+
+.yellow-bar-social-icon ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

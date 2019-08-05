@@ -37,7 +37,12 @@
                         </div> <!-- Service icon end -->
                         <h3><a href="{% url 'service' service.name_slug %}">{{ service.name }}</a></h3>
                         <p>{{ service.short_description }}</p>
-                        <a href="{% url 'service' service.name_slug %}" class="readmore">Подробнее<i class="fa fa-angle-double-right"></i></a>
+{#                        <a href="{% url 'service' service.name_slug %}" class="readmore">Подробнее<i class="fa fa-angle-double-right"></i></a>#}
+                         {% if service.name_slug == "avtomobili-s-probegom" %}
+                            <a href="https://mycitycar.ru" target="_blank" class="readmore">Подробнее<i class="fa fa-angle-double-right"></i></a>
+                         {% else %}
+                            <a href="{% url 'service' service.name_slug %}" class="readmore">Подробнее<i class="fa fa-angle-double-right"></i></a>
+                         {% endif %}
                      </div> <!-- Service content end -->
                   </div> <!-- Service wrapper end -->
             </div> <!-- Col end -->
