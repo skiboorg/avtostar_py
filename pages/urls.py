@@ -23,6 +23,7 @@ urlpatterns = [
     path('service/<name_slug>/', views.service, name='service'),
     path('shop/avtomasla_optom/', views.avtomasla, name='avtomasla'),
     path('about/', views.about, name='about'),
+    path('corruption/', views.corruption, name='corruption'),
     path('ladadetal/', views.ladadetal, name='ladadetal'),
     path('avtodj/', views.avtodj, name='avtodj')
 

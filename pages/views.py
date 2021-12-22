@@ -44,6 +44,19 @@ def about(request):
     title = 'НАШИ КОНТАКТЫ'
     return render(request, 'pages/contact.html', locals())
 
+def corruption(request):
+    if request.POST:
+        send_mail('Новый отзыв', 'Посетитель {} по поводу сервиса {} поставил оценку {}. Тескт сообщения: {} . Телефон: {} '.format(
+            request.POST.get('name'),
+            request.POST.get('service'),
+            request.POST.get('rating'),
+            request.POST.get('message'),
+            request.POST.get('phone')), 'admin@avtostar-kmv.ru', ['marketing@avtostar-kmv.ru'], fail_silently=False)
+        send = True
+
+    title = 'Противодействие коррупции'
+    return render(request, 'pages/korruptsiya.html', locals())
+
 def ladadetal(request):
 
     active_shop = 'active'

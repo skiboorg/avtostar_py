@@ -1,0 +1,107 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="main-container" class="main-container ts-contact-us">
+      <div class="container">
+<p><a href="https://minobrnauki.gov.ru/open_ministry/anticorr/npa/">Нормативно-правовые акты в сфере противодействия коррупции</a><a href="https://minobrnauki.gov.ru/open_ministry/anticorr/npa/">&nbsp;(Минобрнауки России)</a><br />
+<br />
+<a href="#">Официальные документы Производственная фирма "Автостар"</a><br />
+<br />
+<a href="https://www.minobrnauki.gov.ru/open_ministry/anticorr/method/">Методические материалы</a><br />
+</p>
+
+
+            <div class="gap-75"></div>
+        <div class="row">
+
+            <div class="col-12">
+               <h2 class="section-title">
+                  Обращение в комиссию по противодействию коррупции в ПГУ
+               </h2>
+            <p>Возможности для сообщений о фактах коррупции:<br><br>
+
+Для сообщения о нарушениях коррупционного законодательства в ПГУ укажите свои данные: ФИО, представляемую организацию. Анонимные обращения и обращения, не касающиеся коррупционных действий должностных лиц ПГУ, не рассматриваются.
+<br><br>
+Для получения ответа по существу поступившей информации сообщите свой почтовый адрес. Конфиденциальность Вашего обращения гарантируется.
+<br><br>
+Обращаем Ваше внимание на то, что ст. 306 Уголовного кодекса РФ предусмотрена уголовная ответственность за заведомо ложный донос о совершении преступления.
+<br><br>
+Нормативные правовые акты, регламентирующие порядок рассмотрения обращений граждан:<br>
+                <a href="http://www.cfuv.ru/wp-content/uploads/2015/02/fz59-2006.pdf">Федеральный закон от 2 мая 2006 г. № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации</a>
+</p>
+
+               <div id="contact-form" class="form-container contact-us" data-eqcss-0-0-parent="" data-eqcss-1-0-parent="">
+                  <!-- START copy section: Hotel Contact Form -->
+                  <form class="contactMe" action="" method="POST" enctype="multipart/form-data" data-eqcss-0-0="" data-eqcss-1-0="">
+                      {% csrf_token %}
+                     <section>
+                        <div class="form-row">
+                           <div class="col-12">
+                              <input style="width: 100%" type="text" name="name" data-displayname="Name" class="field" placeholder="ФИО отправителя*" required="">
+                           </div>
+
+                        </div>
+                         <div class="form-row">
+                           <div class="col-12">
+                              <input style="width: 100%" type="text" name="email" data-displayname="Name" class="field" placeholder="Эл. почта*" required="">
+                           </div>
+
+                        </div>
+                         <div class="form-row">
+                           <div class="col-12">
+                              <input style="width: 100%" type="text" name="phone" data-displayname="Name" class="field" placeholder="Телефон" required="">
+                           </div>
+
+                        </div>
+
+                        <div class="form-row">
+                           <div class="col-md-12">
+                              <textarea style="width: 100%" name="message" data-displayname="Message" class="field" placeholder="Текст сообщения*" required=""></textarea>
+                           </div>
+                        </div>
+                          <div class="form-row">
+                           <div class="col-md-12">
+                              <input style="width: 100%" name="check" data-displayname="check"  placeholder="Антиспам: введите номер текущего месяца" required="">
+                           </div>
+                        </div>
+                             <div class="form-group">
+                      <label class="fancy-checkbox">
+                        <input style="height: 16px;" type="checkbox" required="required">
+                        <span style="font-size: 16px;
+                            font-weight: bold;">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</span>
+                      </label>
+                    </div>
+
+                        <!-- Google reCAPTCHA -->
+                        <!-- Create a site key for your website: https://www.google.com/recaptcha -->
+                        <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
+                        <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
+                        <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+                        <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
+                        <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
+
+                        <div class="msg"></div>
+
+                        <button class="btn btn-primary" type="submit" data-sending="Sending..." data-text="Send Message">Отправить</button>
+                     </section>
+                     <!-- Ection end -->
+                  </form>
+                   {% if send %}
+                             <span style="color: #FF0000;
+    padding: 19px;
+    border: 2px #FF0000 dotted;
+    margin-bottom: 10px;display: table;">Запрос отправлен. Спасибо!</span>
+                         {% endif %}
+                  <!-- END copy section:Service Contact Form -->
+               </div>
+               <!-- Contact form end -->
+            </div>
+
+         </div>
+
+      </div>
+      <!-- Container end -->
+   </section>
+{% endblock %}
