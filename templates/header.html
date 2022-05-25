@@ -6,7 +6,7 @@
                <div class="col-lg-6 col-md-4"></div>
                <div class="col-lg-4 col-md-5">
                   <div class="top-bar-event ts-top">
-                     <i class="icon icon-clock"></i><span>ЖДЕМ ВАС ЕЖЕДНЕВНО С 8:00 ДО 20:00</span>
+                     <i class="icon icon-clock"></i><span>ЖДЕМ ВАС ЕЖЕДНЕВНО С 8:00 ДО 19:00</span>
                   </div> <!-- Top Bar Text End -->
                </div> <!-- Col End -->
                <div class="col-lg-2 col-md-3 text-right">
@@ -40,14 +40,16 @@
                         <span><i class="icon icon-phone"></i></span>
                         <div class="info-wrapper">
                            <p class="info-title">Консультация</p>
-                            <p class="info-subtitle"> +7 (8793) 32-12-15</p>
+                            <p class="info-subtitle"><a href="tel:+78793321215">+7 (8793) 32-12-15</a></p>
+                            <p class="info-subtitle"><a href="tel:+79283418322">+7 (928) 341-83-22</a></p>
                         </div>
                      </li> <!-- li End -->
                      <li>
                         <span><i class="icon icon-phone3"></i></span>
                         <div class="info-wrapper">
-                           <p class="info-title">Записаться</p>
-                           <p class="info-subtitle">+7 (928) 341-83-22</p>
+                           <p class="info-title">Записаться на техосмотр</p>
+                           <p class="info-subtitle"><a href="tel:+79887604427">+7 (988) 760-44-27</a></p>
+                            <p class="info-subtitle"><a href="tel:+79283418322">+7 (928) 341-83-22</a></p>
                         </div>
                      </li> <!-- Li End -->
                      <li>
@@ -75,12 +77,20 @@
                         ГЛАВНАЯ
                         </a>
                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link {{ active_to }}" href="{% url 'to' %}" >
+                        Пройти техосмотр
+                        </a>
+                     </li>
+
                      <li class="nav-item dropdown ">
                         <a class="nav-link {{ active_service }}" href="#" data-toggle="dropdown">
                         АВТОСЕРВИС
                         <span class="ts-indicator"><i class="fa fa-angle-down"></i></span>
                      </a>
                         <ul class="dropdown-menu ts-dropdown-menu">
+
                             {% for service in main_services %}
                            <li><a href="{% url 'service' service.name_slug%}">{{ service.name }}</a></li>
                            {% endfor %}
@@ -93,9 +103,9 @@
                      </a>
                         <ul class="dropdown-menu ts-dropdown-menu">
 
-                           <li><a href="{% url 'avtomasla' %}">Оптовые поставки масел и автохимии</a></li>
+{#                           <li><a href="{% url 'avtomasla' %}">Оптовые поставки масел и автохимии</a></li>#}
                               <li><a href="{% url 'ladadetal' %}">магазин автозапчастей ВАЗ</a></li>
-                             <li><a href="{% url 'avtodj' %}">МАГАЗИН АВТОЭЛЕКТРОНИКИ АВТОDJ</a></li>
+                             <li><a href="{% url 'avtodj' %}">МАГАЗИН АВТОЭЛЕКТРОНИКИ</a></li>
 
                         </ul><!-- End of Dropdown menu -->
                      </li><!-- End Dropdown -->

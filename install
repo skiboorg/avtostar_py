@@ -1,7 +1,0 @@
-django-wysiwyg
-django-ckeditor
-pillow
-pytils
-
-in settings:
-DJANGO_WYSIWYG_FLAVOR = "ckeditor"

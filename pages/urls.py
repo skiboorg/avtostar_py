@@ -25,7 +25,8 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('corruption/', views.corruption, name='corruption'),
     path('ladadetal/', views.ladadetal, name='ladadetal'),
-    path('avtodj/', views.avtodj, name='avtodj')
+    path('avtodj/', views.avtodj, name='avtodj'),
+    path('pyatigorsk-to/', views.techosmotr, name='to')
 
 
     # path('login/', views.login, name='login'),

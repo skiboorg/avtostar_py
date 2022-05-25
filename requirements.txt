@@ -1,0 +1,4 @@
+django-ckeditor==5.8.0
+pillow
+pytils
+django==3.0

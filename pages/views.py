@@ -80,6 +80,12 @@ def avtodj(request):
     title = 'МАГАЗИН АВТОЭЛЕКТРОНИКИ АВТОDJ'
     return render(request, 'pages/avtodj.html', locals())
 
+
+def techosmotr(request):
+    active_to = 'active'
+    title = 'Пройти техосмотр в Пятигорске'
+    return render(request, 'pages/to.html', locals())
+
 def avtomasla(request):
     if request.POST:
         send_mail('Запрос на обратный звонок', 'Посетитель {} просит перезвонить ему на номер {} по поводу автомасел'.format(
